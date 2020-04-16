@@ -7,13 +7,13 @@ if path.exists("env.py"):
     import env
 
 
-APP = Flask(__name__)
+app = Flask(__name__)
 
 # Defining variables database and MongoDB url
-APP.config["MONGO_DBNAME"] = os.getenv('MONGO_DBNAME')
-APP.config["MONGO_URI"] = os.getenv('MONGO_URI')
+app.config["MONGO_DBNAME"] = os.getenv('MONGO_DBNAME')
+app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 
-MONGO = PyMongo(APP)
+MONGO = PyMongo(app)
 
 
 
