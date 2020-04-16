@@ -19,7 +19,7 @@ MONGO = PyMongo(app)
 
 @app.route('/')
 def hello():
-    return 'Study Pal Test'
+    return 'check it owt'
 
 
 if __name__ == '__main__':
