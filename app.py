@@ -13,7 +13,7 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = os.getenv('MONGO_DBNAME')
 app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 
-MONGO = PyMongo(app)
+mongo = PyMongo(app)
 
 @app.route('/')
 def get_homepage():
