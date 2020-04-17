@@ -3,7 +3,17 @@
     text-align:center;
     padding-bottom:5em;
     color: white;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
 }
 .landing{
     background-image: url(../imgs/code.jpeg)
+}
+.btn-primary {
+    border:none;
+}
+.details{
+    padding-top:5em;
+    margin-left:2em;
+    margin-right:2em;
+    padding-bottom:5em;
 }
