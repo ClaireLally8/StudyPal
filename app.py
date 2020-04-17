@@ -15,11 +15,10 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 
 MONGO = PyMongo(app)
 
-
-
 @app.route('/')
-def hello():
-    return 'check it owt'
+def get_homepage():
+    return render_template('index.html')
+
 
 
 if __name__ == '__main__':
