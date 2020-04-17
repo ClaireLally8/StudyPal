@@ -1,11 +1,9 @@
-.bgimg {
-    max-height:50em;
-    width:100%;
-    display: block;
+.title{
+    padding-top:3em;
+    text-align:center;
+    padding-bottom:5em;
+    color: white;
 }
-.details{
-    padding-left:5em;
-    padding-right:5em;
-    padding-top:5em;
-    width:100%;
+.landing{
+    background-image: url(../imgs/code.jpeg)
 }
