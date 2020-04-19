@@ -29,7 +29,7 @@ def login():
 
     if login_user:
             session['email'] = request.form['email']
-            return redirect(url_for('login'))
+            return render_template('home.html')
 
     return 'email address not found! Try signing up!'
 
@@ -42,7 +42,7 @@ def register():
         if existing_user is None:
             users.insert({'email' : request.form['email']})
             session['email'] = request.form['email']
-            return redirect(url_for('login'))
+            return render_template('home.html')
         
         return 'That email already exists!'
 
