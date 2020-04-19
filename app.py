@@ -48,6 +48,16 @@ def register():
 
     return render_template('register.html')
 
+@app.route('/dates', methods =['POST', 'GET'])
+def dates():
+    if request.method == 'POST':
+        dates = mongo.db.dates
+        startDate = request.form['startDate']
+        endDate = request.form['endDate']
+        dates.insert({'startDate' : startDate, 'endDate' : endDate})
+        return render_template('home.html')
+
+
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
     app.run(host=os.environ.get('IP'),
