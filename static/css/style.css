@@ -16,6 +16,7 @@ body {
     margin: 0 auto;
     max-width: 1000px;
     text-align: center;
+
 }
 
 #sideMenu {
@@ -30,7 +31,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  opacity: 0.99
+  opacity: 0.99;
+  z-index:1;
 }
 
 .nav-items {
