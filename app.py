@@ -18,7 +18,7 @@ mongo = PyMongo(app)
 @app.route('/')
 def index():
     if 'email' in session:
-        return 'You are logged in as ' + session['email']
+        return render_template('home.html')
 
     return render_template('login.html')
 
