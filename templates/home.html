@@ -1,14 +1,21 @@
 {% extends "base.html" %}
 {% block body %}
-
+<form method=POST action="{{ url_for('dates') }}">
 <div class="row">
-<div class="col-lg-6 col-md-6 col-sm-12">
+<div class="col-lg-4 col-md-4 col-sm-12">
 <h6>Schedule Start Date</h6>
 <input type="date" id="startDate" name="startDate">
 </div>
-<div class="col-lg-6 col-md-6 col-sm-12">
+<div class="col-lg-4 col-md-4 col-sm-12">
 <h6>Target End Date</h6>
 <input type="date" id="endDate" name="endDate">
 </div>
+<div class="form-row text-center col-lg-4 col-md-4 col-sm-12">
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Calculate my schedule!</button>
+    </div>
+ </div>
 </div>
+</form>
+
     {% endblock %}
