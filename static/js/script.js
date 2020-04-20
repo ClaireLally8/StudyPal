@@ -8,11 +8,12 @@ function serializeDate(date) {
   return date.toISOString().split("T")[0];
 }
   let startDate = new Date();
-  $("#startDate").val(serializeDate(today));
+  $("#startDate").val(serializeDate(startDate));
 
   let endDate = new Date();
-  endDate.setDate(today.getDate() + 365);
+  endDate.setDate(startDate.getDate() + 365);
   $("#endDate").val(serializeDate(endDate));
 
-  let scheduleLength = Math.round(endDate - startDate);
+  let milSec = 1000 * 60 * 60 * 24;
+  let scheduleLength = Math.round((endDate - startDate)/milSec);
   $("#scheduleLength").html(scheduleLength);

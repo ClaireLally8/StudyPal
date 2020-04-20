@@ -47,6 +47,14 @@ def register():
         return 'That email already exists!'
 
     return render_template('register.html')
+    
+@app.route('/logout')
+def logout():  
+    if 'email' in session:  
+        session.pop('email',None)  
+        return render_template('login.html');  
+    else:  
+        return '<p>user already logged out</p>'
 
 @app.route('/dates', methods =['POST', 'GET'])
 def dates():
@@ -54,7 +62,7 @@ def dates():
         dates = mongo.db.dates
         startDate = request.form['startDate']
         endDate = request.form['endDate']
-        dates.insert({'startDate' : startDate, 'endDate' : endDate})
+        dates.insert({'startDate' : startDate, 'endDate' : endDate, 'email' : session['email']})
         return render_template('home.html')
 
 
