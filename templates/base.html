@@ -13,14 +13,18 @@
   <div id="hamburgerBtn">&#9776</div>
   <nav id="sideMenu">
     <div class="nav-brand">
-      <p><a href="https://courses.codeinstitute.net/program/FullstackWebDeveloper">Code Institute Schedule</a></p>
+      <p>Your Study Planner</a></p>
     </div>
     <ul class="nav-items">
       <li>Home</li>
       <li>Modules</li>
       <li>Notes</li>
     </ul>
-    <div class="footer">      <p><strong>Help</strong></p>
+    <div class="footer">      
+    <p><strong>Help</strong></p>
+    <form action= "{{ url_for('logout') }}">
+    <p><strong>Log Out</strong></p>
+    </form>
     </div>
   </nav>
 </div>
