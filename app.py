@@ -1,4 +1,5 @@
 import os
+import json
 from flask import Flask, render_template, url_for, session, request, redirect
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -18,7 +19,7 @@ mongo = PyMongo(app)
 @app.route('/')
 def index():
     if 'email' in session:
-        return render_template('home.html')
+        return render_template('modules.html')
 
     return render_template('login.html')
 
@@ -29,7 +30,7 @@ def login():
 
     if login_user:
             session['email'] = request.form['email']
-            return render_template('home.html')
+            return render_template('modules.html')
 
     return 'email address not found! Try signing up!'
 
@@ -42,29 +43,15 @@ def register():
         if existing_user is None:
             users.insert({'email' : request.form['email']})
             session['email'] = request.form['email']
-            return render_template('home.html')
+            return render_template('modules.html')
         
         return 'That email already exists!'
 
     return render_template('register.html')
-    
-@app.route('/logout')
-def logout():  
-    if 'email' in session:  
-        session.pop('email',None)  
-        return render_template('login.html');  
-    else:  
-        return '<p>user already logged out</p>'
 
-@app.route('/dates', methods =['POST', 'GET'])
-def dates():
-    if request.method == 'POST':
-        dates = mongo.db.dates
-        startDate = request.form['startDate']
-        endDate = request.form['endDate']
-        dates.insert({'startDate' : startDate, 'endDate' : endDate, 'email' : session['email']})
-        return render_template('home.html')
-
+@app.route('/modules')
+def modules():
+    return render_template("modules.html", lessons = mongo.db.lessons.find())
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
