@@ -25,7 +25,8 @@
 </div>
 <div class="container-fluid">
 {% for lesson in lessons %}
-    <button class="accordion">{{lesson.module}}</button>
+    
+    <button class="accordion">{{lesson.module}} <a href="{{url_for('delete_lesson', lesson_id=lesson._id)}}"><i class="fas fa-trash"></i></a></button>
 <div class="panel">
   <br><p>{{lesson.lesson}}</p>
 </div>
