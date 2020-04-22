@@ -1,3 +1,23 @@
-% extends "base.html" %}
+{% extends "base.html" %}
 {% block body %}
+<div class="accordion" id="accordionExample">
+  {% for task in tasks %}
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         {{lesson.module}}
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        {{lesson.lesson}}
+      </div>
+    </div>
+  </div>
+      {% endfor %}
+    </div>
+    
     {% endblock %}
