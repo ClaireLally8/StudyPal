@@ -53,6 +53,11 @@ def register():
 def modules():
     return render_template("modules.html", lessons = mongo.db.lessons.find())
 
+@app.route('/add_lesson', methods=['POST'])
+def add_lesson():
+    mongo.db.lessons.insert_one(request.form.to_dict())
+    return redirect(url_for('modules'))
+
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
     app.run(host=os.environ.get('IP'),
