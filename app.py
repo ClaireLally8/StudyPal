@@ -29,8 +29,8 @@ def login():
     login_user = users.find_one({'email' : request.form['email']})
 
     if login_user:
-            session['email'] = request.form['email']
-            return render_template('modules.html')
+        session['email'] = request.form['email']
+        return render_template('modules.html')
 
     return 'email address not found! Try signing up!'
 
@@ -48,18 +48,27 @@ def register():
         return 'That email already exists!'
 
     return render_template('register.html')
-
+    
 @app.route('/modules')
 def modules():
     return render_template("modules.html", lessons = mongo.db.lessons.find())
 
 @app.route('/add_lesson', methods=['POST'])
 def add_lesson():
-    mongo.db.lessons.insert_one(request.form.to_dict())
+    mongo.db.lessons.insert({'module' : request.form['module'], 'lesson' : request.form['lesson'], 'email' : session['email']})
     return redirect(url_for('modules'))
+
+@app.route('/delete_lesson/<lesson_id>')
+def delete_lesson(lesson_id):
+    mongo.db.lessons.remove({'_id': ObjectId(lesson_id)})
+    return redirect(url_for('modules'))
+
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
             debug=True)
+
+
+
