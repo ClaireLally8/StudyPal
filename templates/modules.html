@@ -1,5 +1,28 @@
 {% extends "base.html" %}
 {% block body %}
+
+<div class="container-fluid">
+    <button class="accordion">Add Content</button>
+<div class="panel">
+  <br>
+  <form action="{{ url_for('add_lesson') }}" method="POST">
+    <div class="row">
+        <div class="input-field">
+        <label for="subject_name">Subject Name</label>
+            <input id="module_name" name="module" type="text" class="validate">
+        </div>
+        <div class="input-field">
+        <label for="lesson_name">Lesson Name</label>
+            <input id="lesson_name" name="lesson" type="text" class="validate"> 
+        </div>
+    </div>
+    <div class="row">
+        <button class="btn waves-effect waves-light" type="submit">Add Subject
+        </button>
+    </div>
+</form>
+</div>
+</div>
 <div class="container-fluid">
 {% for lesson in lessons %}
     <button class="accordion">{{lesson.module}}</button>
