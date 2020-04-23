@@ -53,13 +53,7 @@ def register():
 def modules():
     return render_template("modules.html", 
                            lessons=mongo.db.lessons.find())
-
-@app.route('/notes')
-def notes():
-    return render_template("notes.html", 
-                           notes=mongo.db.notes.find())
                            
-
 @app.route('/add_lesson', methods=['POST'])
 def add_lesson():
     mongo.db.lessons.insert({'module' : request.form['module'], 'lesson' : request.form['lesson'], 'email' : session['email']})
@@ -70,9 +64,19 @@ def delete_lesson(lesson_id):
     mongo.db.lessons.remove({'_id': ObjectId(lesson_id)})
     return redirect(url_for('modules'))
 
+@app.route('/notes')
+def notes():
+    return render_template("notes.html", 
+                           notes=mongo.db.notes.find())
+
 @app.route('/add_notes', methods=['POST'])
 def add_notes():
     mongo.db.notes.insert({'note' : request.form['note'], 'title' : request.form['title'], 'email' : session['email']})
+    return redirect(url_for('notes'))
+
+@app.route('/delete_note/<note_id>')
+def delete_notes(note_id):
+    mongo.db.notes.remove({'_id': ObjectId(note_id)})
     return redirect(url_for('notes'))
 
 if __name__ == '__main__':
