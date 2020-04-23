@@ -79,6 +79,12 @@ def delete_notes(note_id):
     mongo.db.notes.remove({'_id': ObjectId(note_id)})
     return redirect(url_for('notes'))
 
+@app.route('/edit_note/<note_id>')
+def edit_notes(note_id):
+    note =  mongo.db.notes.find_one({"_id": ObjectId(note_id)})
+    return render_template('editnote.html', note=note)
+
+
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
     app.run(host=os.environ.get('IP'),
