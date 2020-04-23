@@ -84,6 +84,16 @@ def edit_notes(note_id):
     note =  mongo.db.notes.find_one({"_id": ObjectId(note_id)})
     return render_template('editnote.html', note=note)
 
+@app.route('/update_notes/<note_id>', methods=["POST"])
+def update_notes(note_id):
+    notes = mongo.db.notes
+    notes.update( {'_id': ObjectId(note_id)},
+    {
+        'title':request.form.get('title'),
+        'note':request.form.get('note'),
+    })
+    return redirect(url_for('notes'))
+
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
