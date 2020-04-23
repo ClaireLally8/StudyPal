@@ -81,8 +81,8 @@ def delete_notes(note_id):
 
 @app.route('/edit_note/<note_id>')
 def edit_notes(note_id):
-    note =  mongo.db.notes.find_one({"_id": ObjectId(note_id)})
-    return render_template('editnote.html', note=note)
+    this_note =  mongo.db.notes.find_one({"_id": ObjectId(note_id)})
+    return render_template('editnote.html', note=this_note)
 
 @app.route('/update_notes/<note_id>', methods=["POST"])
 def update_notes(note_id):
