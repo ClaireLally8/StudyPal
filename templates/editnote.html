@@ -3,12 +3,12 @@
 
 <div class="container-fluid">
     <div class = "container-fluid">
-    <form action="{{ url_for('update_notes', note_id=notes._id) }}" method="POST">
+    <form action="{{ url_for('update_notes', note_id=note._id) }}" method="POST">
       <div class="row">
       <div class="row">
       <div class="input-field">
         <label for="title">Notes Name</label>
-            <input id="title" name="title" type="text" required placeholder="{{note.title}}"> 
+            <input id="title" name="title" type="text" required value="{{note.title}}"> 
         </div>
       <div class="input-field">
       <label for="icon_telephone">Notes</label>
