@@ -19,7 +19,7 @@ mongo = PyMongo(app)
 @app.route('/')
 def index():
     if 'email' in session:
-        return render_template('modules.html')
+        return redirect(url_for('modules'))
 
     return render_template('login.html')
 
@@ -30,7 +30,7 @@ def login():
 
     if login_user:
         session['email'] = request.form['email']
-        return render_template('modules.html')
+        return redirect(url_for('modules'))
 
     return 'email address not found! Try signing up!'
 
@@ -43,12 +43,16 @@ def register():
         if existing_user is None:
             users.insert({'email' : request.form['email']})
             session['email'] = request.form['email']
-            return render_template('modules.html')
+            return redirect(url_for('modules'))
         
         return 'That email already exists!'
 
     return render_template('register.html')
-    
+@app.route('/logout')
+def logout():
+    session['email'] = None
+    return render_template('login.html')
+
 @app.route('/modules')
 def modules():
     return render_template("modules.html", 
