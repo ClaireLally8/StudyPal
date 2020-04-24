@@ -1,6 +1,7 @@
 import os
 import json
-from flask import Flask, render_template, url_for, session, request, redirect
+from flask import Flask, render_template, request, redirect
+from flask import url_for, flash, session
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from os import path
@@ -32,7 +33,8 @@ def login():
         session['email'] = request.form['email']
         return redirect(url_for('modules'))
 
-    return 'email address not found! Try signing up!'
+    flash('email address not found! Try signing up!')
+    return render_template('login.html')
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
@@ -45,7 +47,8 @@ def register():
             session['email'] = request.form['email']
             return redirect(url_for('modules'))
         
-        return 'That email already exists!'
+        flash('That email already exists!')
+        return render_template('register.html')
 
     return render_template('register.html')
 @app.route('/logout')
