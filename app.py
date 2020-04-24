@@ -51,7 +51,7 @@ def register():
         return render_template('register.html')
 
     return render_template('register.html')
-    
+
 @app.route('/logout')
 def logout():
     session['email'] = None
@@ -61,7 +61,7 @@ def logout():
 def modules():
     email = session['email']
     return render_template("modules.html", 
-                           lessons=mongo.db.lessons.find({'email' : email}))
+                           lessons=mongo.db.lessons.find())
                            
 @app.route('/add_lesson', methods=['POST'])
 def add_lesson():
@@ -104,6 +104,9 @@ def update_notes(note_id):
     })
     return redirect(url_for('notes'))
 
+@app.route('/help')
+def help():
+    return render_template('help.html')
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
