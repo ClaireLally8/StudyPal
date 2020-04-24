@@ -1,6 +1,6 @@
 import os
 import json
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, session, request, redirect
 from flask import url_for, flash, session
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -51,6 +51,7 @@ def register():
         return render_template('register.html')
 
     return render_template('register.html')
+    
 @app.route('/logout')
 def logout():
     session['email'] = None
@@ -58,8 +59,9 @@ def logout():
 
 @app.route('/modules')
 def modules():
+    email = session['email']
     return render_template("modules.html", 
-                           lessons=mongo.db.lessons.find())
+                           lessons=mongo.db.lessons.find({'email' : email}))
                            
 @app.route('/add_lesson', methods=['POST'])
 def add_lesson():
@@ -73,8 +75,9 @@ def delete_lesson(lesson_id):
 
 @app.route('/notes')
 def notes():
+    email = session['email']
     return render_template("notes.html", 
-                           notes=mongo.db.notes.find())
+                           notes=mongo.db.notes.find({'email' : email}))
 
 @app.route('/add_notes', methods=['POST'])
 def add_notes():
