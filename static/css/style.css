@@ -1,4 +1,22 @@
 .nameindex {
     text-align:center;
     padding-top:2.75em;
+    padding-bottom:3rem;
+
 }
+.logincontainer {
+        padding-left:2rem;
+    padding-right:2rem;
+}
+.shadow-drop-center{-webkit-animation:shadow-drop-center .4s cubic-bezier(.25,.46,.45,.94) both;animation:shadow-drop-center .4s cubic-bezier(.25,.46,.45,.94) both}
+
+.loginbtn {
+    margin-top:2rem;
+    text-align:center;
+}
+.reghere {
+    padding-top:5rem;
+    text-align:center;
+}
+
+@-webkit-keyframes shadow-drop-center{0%{-webkit-box-shadow:0 0 0 0 transparent;box-shadow:0 0 0 0 transparent}100%{-webkit-box-shadow:0 0 20px 0 rgba(0,0,0,.35);box-shadow:0 0 20px 0 rgba(0,0,0,.35)}}@keyframes shadow-drop-center{0%{-webkit-box-shadow:0 0 0 0 transparent;box-shadow:0 0 0 0 transparent}100%{-webkit-box-shadow:0 0 20px 0 rgba(0,0,0,.35);box-shadow:0 0 20px 0 rgba(0,0,0,.35)}}
