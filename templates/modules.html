@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block body %}
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">New Subject</button>
+<div class="container-fluid">
+<div class = "row">
+<div class = "col-lg-3 col-md-6 col-sm-12 offset-3">
+<button type="button" class="btn btn-primary new-subject" data-toggle="modal" data-target=".bd-example-modal-xl">New Subject</button>
 
 <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl" role="document">
@@ -24,7 +26,7 @@
   </div>
 </div>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">New Topic</button>
+<button type="button" class="btn btn-primary new-topic" data-toggle="modal" data-target=".bd-example-modal-lg">New Topic</button>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
@@ -54,6 +56,7 @@
     </div>
   </div>
 </div>
+</div></div></div>
 
 <div class="container-fluid">
 {% for topics in topics %}
