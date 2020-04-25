@@ -61,17 +61,28 @@ def logout():
 def modules():
     email = session['email']
     return render_template("modules.html", 
-                           lessons=mongo.db.lessons.find())
-                           
-@app.route('/add_lesson', methods=['POST'])
-def add_lesson():
-    mongo.db.lessons.insert({'module' : request.form['module'], 'lesson' : request.form['lesson'], 'email' : session['email']})
+                           subjects=mongo.db.subjects.find(), topics=mongo.db.topics.find())
+
+@app.route('/modules_lessons')
+def modules_lessons():
+    email = session['email']
+    return render_template("modules.html", subjects=mongo.db.subjects.find(), 
+                           topics=mongo.db.topics.find())
+
+@app.route('/add_subject', methods=['POST'])
+def add_subject():
+    mongo.db.subjects.insert({'subject' : request.form['subjects'],  'email' : session['email']})
     return redirect(url_for('modules'))
 
-@app.route('/delete_lesson/<lesson_id>')
-def delete_lesson(lesson_id):
-    mongo.db.lessons.remove({'_id': ObjectId(lesson_id)})
-    return redirect(url_for('modules'))
+@app.route('/add_topic', methods=['POST'])
+def add_topic():
+    mongo.db.topics.insert({'topic' : request.form['topic'], 'subject' : request.form['subject'],  'email' : session['email']})
+    return redirect(url_for('modules_lessons'))
+
+@app.route('/delete/<topics_id>')
+def delete(topics_id):
+    mongo.db.topics.remove({'_id': ObjectId(topics_id)})
+    return redirect(url_for('modules_lessons'))
 
 @app.route('/notes')
 def notes():
