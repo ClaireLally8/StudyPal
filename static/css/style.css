@@ -1,7 +1,22 @@
+body {
+    background-color:#FFF4F3;
+}
 .nameindex {
 text-align:center;
 padding-top:2.75em;
 padding-bottom:3rem;
+
+}
+.emailinput { 
+    border:none;
+    border-bottom: 2px #798897 solid;
+    background-color: transparent;
+
+}
+.emailinput:active { 
+    border:none;
+    border-bottom: 2px #798897 solid;
+    background-color: transparent;
 
 }
 .logincontainer {
@@ -16,6 +31,19 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .loginbtn {
 margin-top:2rem;
 text-align:center;
+background-color:#798897;
+border:none;
+color: #FFF4F3;
+}
+.loginbtn:hover
+{
+  background-color:#E16365;
+border:none;
+}
+.loginbtn:active
+{
+  background-color:#E16365;
+border:none;
 }
 .reghere {
 padding-top:5rem;
@@ -23,6 +51,13 @@ text-align:center;
 }
 .bottom{
     padding-top:0.75rem;
+}
+.link {
+    color: #E16365;
+}
+.link:hover {
+    color: #E16365;
+    text-decoration:underline
 }
 @media screen and (max-width: 576px) {
   .logincontainer {
