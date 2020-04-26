@@ -5,16 +5,16 @@
             <form method=POST action="{{ url_for('register') }}">
             <div class="col-lg-6 offset-lg-3 col-sm-12">
            <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
+        <label for="exampleInputEmail1">Enter your email address to register your account</label>
         <input type="email" name="email" class="form-control emailinput" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <small id="emailHelp" class="form-text text-muted bottom">We'll never share your email with anyone else.</small>
       </div>
       <button type="submit" class="btn btn-primary loginbtn">Register</button>
             </div>
             </form>
         </div>
         <div class="reghere">
-    Already have an accoutn? <a href="{{ url_for('login') }}">Login here</a>.
+    Already have an account? <a href="{{ url_for('home') }}">Login here</a>.
   </div>
     </div>
 </div>
