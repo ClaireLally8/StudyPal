@@ -1,3 +1,10 @@
+/* The CSS for the login and register pages.  Split from the logged-in pages. 
+
+Colour Scheme is as follows:
+#FFF4F3 - Page background colour
+#E16365 - Links/Hover areas colours
+#798897 - Grey for buttons
+*/
 body {
     background-color:#FFF4F3;
 }
@@ -67,6 +74,7 @@ text-align:center;
     color: #E16365;
     text-decoration:underline
 }
+/* Media query to remove shadow and make input section larger */
 @media screen and (max-width: 576px) {
   .logincontainer {
       box-shadow: none;
