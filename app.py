@@ -24,7 +24,14 @@ def index():
 
     return render_template('login.html')
 
-@app.route('/login', methods=['POST'])
+@app.route('/home')
+def home():
+    if 'email' in session:
+        return redirect(url_for('modules'))
+
+    return render_template('login.html')
+
+@app.route('/login', methods=['POST', 'GET'])
 def login():
     users = mongo.db.users
     login_user = users.find_one({'email' : request.form['email']})
