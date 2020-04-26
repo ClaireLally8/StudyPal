@@ -26,9 +26,6 @@ def index():
 
 @app.route('/home')
 def home():
-    if 'email' in session:
-        return redirect(url_for('modules'))
-
     return render_template('login.html')
 
 @app.route('/login', methods=['POST', 'GET'])
@@ -40,7 +37,7 @@ def login():
         session['email'] = request.form['email']
         return redirect(url_for('modules'))
 
-    flash('email address not found! Try signing up!')
+    flash('Email address not found! Try signing up!')
     return render_template('login.html')
 
 @app.route('/register', methods=['POST', 'GET'])
@@ -54,7 +51,7 @@ def register():
             session['email'] = request.form['email']
             return redirect(url_for('modules'))
         
-        flash('That email already exists!')
+        flash('That email already exists in our system!')
         return render_template('register.html')
 
     return render_template('register.html')
