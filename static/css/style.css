@@ -1,6 +1,14 @@
 body {
     background-color:#FFF4F3;
 }
+.flashes {
+    text-decoration:none;
+    list-style:none;
+    color:#E16365;
+    text-decoration:underline;
+    font-weight:bold;
+    font-size:1.4rem;
+}
 .nameindex {
 text-align:center;
 padding-top:2.75em;
