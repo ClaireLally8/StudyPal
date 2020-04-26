@@ -5,6 +5,15 @@
   <div class="details">
     <form method = "POST" action="{{ url_for('login') }}">
     <div class="col-lg-6 offset-lg-3 col-sm-12">
+    {% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul class=flashes>
+  {% for message in messages %}
+  <li>{{ message }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
       <div class="form-group">
         <label for="exampleInputEmail1">Enter your email address to login</label>
         <input type="email" name="email" class="form-control emailinput" id="exampleInputEmail1" aria-describedby="emailHelp" required>
@@ -18,14 +27,4 @@
     Don't have an account? <a class="link" href="{{ url_for('register') }}">Sign up here</a>.
   </strong></div>
 </div>
-
-{% with messages = get_flashed_messages() %}
-{% if messages %}
-<ul class=flashes>
-  {% for message in messages %}
-  <li>{{ message }}</li>
-  {% endfor %}
-</ul>
-{% endif %}
-{% endwith %}
 {% endblock %}
