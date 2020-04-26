@@ -14,9 +14,9 @@
     </div>
     </form>
   </div>
-  <div class="reghere">
-    Don't have an account? <a href="{{ url_for('register') }}">Sign up here</a>.
-  </div>
+  <div class="reghere"><strong>
+    Don't have an account? <a class="link" href="{{ url_for('register') }}">Sign up here</a>.
+  </strong></div>
 </div>
 
 {% with messages = get_flashed_messages() %}
