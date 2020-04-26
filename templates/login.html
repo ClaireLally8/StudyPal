@@ -1,15 +1,17 @@
 {% extends "index.html" %}
 {% block body %}
 
-<div class="container logincontainer shadow-drop-center">
+<div class="container logincontainer">
   <div class="details">
     <form method = "POST" action="{{ url_for('login') }}">
+    <div class="col-lg-6 offset-lg-3 col-sm-12">
       <div class="form-group">
         <label for="exampleInputEmail1">Enter your email address to login</label>
-        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+        <input type="email" name="email" class="form-control emailinput" id="exampleInputEmail1" aria-describedby="emailHelp" required>
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <button type="submit" class="btn btn-primary loginbtn">Login</button>
+    </div>
     </form>
   </div>
   <div class="reghere">
