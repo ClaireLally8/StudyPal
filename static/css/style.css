@@ -1,17 +1,19 @@
 /* The CSS for the login and register pages.  Split from the logged-in pages. 
 
 Colour Scheme is as follows:
-#FFF4F3 - Page background colour
-#E16365 - Links/Hover areas colours
-#798897 - Grey for buttons
+#F1F2EF
+#718280
+#848377
+#676555
+#181719
 */
 body {
-    background-color:#FFF4F3;
+    background-color:#F1F2EF;
 }
 .flashes {
     text-decoration:none;
     list-style:none;
-    color:#E16365;
+    color:#689E9B;
     text-decoration:underline;
     font-weight:bold;
     font-size:1.4rem;
@@ -24,13 +26,13 @@ padding-bottom:3rem;
 }
 .emailinput { 
     border:none;
-    border-bottom: 2px #798897 solid;
+    border-bottom: 2px #676555 solid;
     background-color: transparent;
 
 }
 .emailinput:active { 
     border:none;
-    border-bottom: 2px #798897 solid;
+    border-bottom: 2px #676555 solid;
     background-color: transparent;
 
 }
@@ -46,21 +48,16 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .loginbtn {
 margin-top:2rem;
 text-align:center;
-background-color:#798897;
+background-color:#676555;
 border:none;
-color: #FFF4F3;
+color: #F1F2EF;
 }
 .loginbtn:hover
 {
-  background-color:#E16365;
+  background-color:#689E9B;
 border:none;
-color: #FFF4F3;
+color: #F1F2EF;
 text-decoration:none;
-}
-.loginbtn:active
-{
-  background-color:#E16365;
-border:none;
 }
 .reghere {
 padding-top:5rem;
@@ -70,12 +67,13 @@ text-align:center;
     padding-top:0.75rem;
 }
 .link {
-    color: #E16365;
+    color: #689E9B;
 }
 .link:hover {
-    color: #E16365;
+    color: #689E9B;
     text-decoration:underline
 }
+
 /* Media query to remove shadow and make input section larger */
 @media screen and (max-width: 576px) {
   .logincontainer {
