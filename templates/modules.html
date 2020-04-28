@@ -1,63 +1,62 @@
 {% extends "base.html" %}
 {% block body %}
 <div class="container-fluid">
-<div class = "row">
-<div class = "col-lg-3 col-md-6 col-sm-12 offset-3">
-<button type="button" class="btn btn-primary new-subject" data-toggle="modal" data-target=".bd-example-modal-xl">New Subject</button>
-
-<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl" role="document">
-    <div class="modal-content">
-    <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New Subject</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form action="{{ url_for('add_subject') }}" method="POST">
-        <div class="input-field">
-        <br><br>
-        <label for="subject_name">Subject Name</label>
-            <input id="subjects" name="subjects" type="text" required>
-            <button class="btn btn-primary" type="submit">Add Subject</button><br><br><br>
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-12 offset-3">
+      <button type="button" class="btn btn-link thisbutton" data-toggle="modal" data-target=".bd-example-modal-xl">New Subject</button>
+      <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New Subject</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form action="{{ url_for('add_subject') }}" method="POST">
+              <div class="input-field">
+                <br><br>
+                <label for="subject_name">Subject Name</label>
+                <input id="subjects" name="subjects" type="text" required>
+                <button class="btn btn-link thisbutton" type="submit">Add Subject</button><br><br><br>
+              </div>
+            </form>
+          </div>
         </div>
-      </form>
+      </div>
+
+      <button type="button" class="btn btn-link thisbutton" data-toggle="modal" data-target=".bd-example-modal-lg">New Topic</button>
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add a Topic</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form action="{{ url_for('add_topic') }}" method="POST">
+              <br>
+              <select id="subject" name="subject">
+                <option value="" disabled selected>Choose the Subject</option>
+                {% for sub in subjects %}
+                <option value="{{sub.subject}}">{{sub.subject}}</option>
+                {% endfor %}
+              </select>
+              <br><br>
+              <div class="input-field">
+                <br><br>
+                <label for="subject_name">Topic Name</label>
+                <input id="topic_name" name="topic" type="text" required>
+                <button class="btn btn-link thisbutton" type="submit">Add Topic</button><br><br><br>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-<button type="button" class="btn btn-primary new-topic" data-toggle="modal" data-target=".bd-example-modal-lg">New Topic</button>
-
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-    <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add a Topic</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form action="{{ url_for('add_topic') }}" method="POST">
-      <br>
-                      <select id="subject" name="subject">
-                  <option value="" disabled selected>Choose the Subject</option>
-                  {% for sub in subjects %}
-                      <option value="{{sub.subject}}">{{sub.subject}}</option>
-                  {% endfor %}
-                </select>
-        <br><br>
-        <div class="input-field">
-        <br><br>
-        <label for="subject_name">Topic Name</label>
-            <input id="topic_name" name="topic" type="text" required>
-            <button clasas="btn btn-primary" type="submit">Add Topic</button><br><br><br>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-</div></div></div>
-
 <div class="container-fluid">
 {% for topics in topics %}
     
