@@ -57,7 +57,7 @@
     </div>
   </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid accordcont">
 {% for topics in topics %}
     
     <button class="accordion">{{topics.subject}} <a href="{{url_for('delete', topics_id=topics._id)}}"><i class="fas fa-trash"></i></a></button>
@@ -65,4 +65,5 @@
   <br><p>{{topics.topic}}</p>
 </div>
 {% endfor %}
+</div>
     {% endblock %}
