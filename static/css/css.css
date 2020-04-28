@@ -31,7 +31,6 @@ body {
   height:100vh;
   background-color: #181719;
   color: #F1F2EF;
-  text-decoration:underline;
   padding: 1.875rem 1.25rem;
   display: flex;
   flex-direction: column;
@@ -78,38 +77,30 @@ body {
 #hamburgerBtn:hover {
   cursor: pointer;
 }
-
 .accordion {
-  background-color: #F1F2EF;
-  color: #676555;
-  cursor: pointer;
-  padding: 1.125rem;
-  width: 100%;
+  background-color: #848377;
+  color: #F1F2EF;
+  padding: 1.9rem;
+  width:80%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 0.938rem;
   transition: 0.4s;
-}
-.accord {
-    margin-top:4rem;
-}
-.accordion {
-    margin-bottom:0.625rem;
-    background-color:#676555;
-    color:#798897;
-
+  margin-top:1em;
+        margin-left:3rem;
 }
 .active, .accordion:hover {
   background-color: #676555; 
 }
-
 .panel {
   padding: 0 1.125rem;
   display: none;
   background-color: #F1F2EF;
   overflow: hidden;
 } 
+.accordcont {
+    margin-top:2.5rem;
+}
 .thisbutton {
 margin-top:2rem;
 text-align:center;
@@ -149,5 +140,9 @@ text-decoration:none;
   #hamburgerBtn {
     display: inline-block;
     z-index: 10;
+  }
+  .accordion {
+      margin-left:0;
+      width:100%
   }
 }
