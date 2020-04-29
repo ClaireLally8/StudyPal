@@ -40,52 +40,42 @@ body {
   opacity: 0.99;
   z-index: 1;
 }
-
 .nav-items {
   padding-inline-start: 0;
 }
-
 .nav-items>li {
   list-style-type: none;
   margin-bottom: 0.625;
   text-align: left;
 }
-
 .nav-items>li:hover {
   transform: scale(1.01);
 
 }
-
 .menulist {
   text-decoration: none;
   color: #F1F2EF;
 }
-
 .green {
   color: #689E9B !important;
   text-decoration: underline;
 }
-
 .menulist:hover {
   text-decoration: underline;
   color: #F1F2EF;
 }
-
 #hamburgerBtn {
   display: none;
   position: absolute;
   top: 1.875rem;
   right: 1.875rem;
 }
-
 #hamburgerBtn:hover {
   cursor: pointer;
 }
-
 .wrapper {
   text-align: center;
 }
-
 .thisbutton {
   margin-top: 4rem;
   text-align: center;
@@ -101,7 +91,12 @@ body {
   color: #F1F2EF;
   text-decoration: none;
 }
-
+.modalbutton {
+    text-align:center;
+}
+.modal-header .modal-content {
+    background-color:#F1F2EF;
+}
 button.accordion {
   width: 100%;
   background-color: #689E9B;
