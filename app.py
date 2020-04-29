@@ -64,14 +64,17 @@ def logout():
 @app.route('/modules')
 def modules():
     email = session['email']
+    topics = list(mongo.db.topics.find())
+    print(topics)
     return render_template("modules.html", 
-                           subjects=mongo.db.subjects.find(), topics=mongo.db.topics.find())
+                           subjects=mongo.db.subjects.find(), subjectList=mongo.db.subjects.find(), topics = list(mongo.db.topics.find()))
 
 @app.route('/modules_lessons')
 def modules_lessons():
     email = session['email']
-    return render_template("modules.html", subjects=mongo.db.subjects.find(), 
-                           topics=mongo.db.topics.find())
+    
+    return render_template("modules.html", subjects=mongo.db.subjects.find(),
+                           topics = list(mongo.db.topics.find()))
 
 @app.route('/add_subject', methods=['POST'])
 def add_subject():
