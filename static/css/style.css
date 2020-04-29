@@ -2,7 +2,7 @@
 
 Colour Scheme is as follows:
 #F1F2EF
-#718280
+#689E9B
 #848377
 #676555
 #181719
@@ -48,7 +48,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .loginbtn {
 margin-top:2rem;
 text-align:center;
-background-color:#676555;
+background-color:#848377;
 border:none;
 color: #F1F2EF;
 }

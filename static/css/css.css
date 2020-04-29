@@ -1,9 +1,8 @@
-
 /* The CSS for the modules and notes pages.  Split from the log in/register pages. 
 
 Colour Scheme is as follows:
 #F1F2EF
-#718280
+#689E9B
 #848377
 #676555
 #181719
@@ -12,23 +11,26 @@ Colour Scheme is as follows:
 html {
   min-height: 100vh;
 }
+
 body {
-    margin-left: 15.625rem;
+  margin-left: 15.625rem;
   position: relative;
-  background-color:#F1F2EF;
+  background-color: #F1F2EF;
 }
+
 .container {
-    padding: 2.5rem;
-    margin: 0 auto;
-    max-width: 1000px;
-    text-align: center;
+  padding: 2.5rem;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
 }
+
 #sideMenu {
-  width:15.625rem;
+  width: 15.625rem;
   position: fixed;
-  top:0;
-  left:0;
-  height:100vh;
+  top: 0;
+  left: 0;
+  height: 100vh;
   background-color: #181719;
   color: #F1F2EF;
   padding: 1.875rem 1.25rem;
@@ -36,35 +38,37 @@ body {
   flex-direction: column;
   justify-content: space-between;
   opacity: 0.99;
-  z-index:1;
+  z-index: 1;
 }
 
 .nav-items {
-    padding-inline-start: 0;
+  padding-inline-start: 0;
 }
 
-.nav-items > li{
+.nav-items>li {
   list-style-type: none;
   margin-bottom: 0.625;
   text-align: left;
 }
 
-.nav-items > li:hover{
+.nav-items>li:hover {
   transform: scale(1.01);
 
 }
-.menulist{
+
+.menulist {
   text-decoration: none;
-    color:#F1F2EF; 
-}
-.green {
-  color: #718280!important;
-  text-decoration:underline;
+  color: #F1F2EF;
 }
 
-.menulist:hover{
+.green {
+  color: #689E9B !important;
   text-decoration: underline;
-    color:#F1F2EF; 
+}
+
+.menulist:hover {
+  text-decoration: underline;
+  color: #F1F2EF;
 }
 
 #hamburgerBtn {
@@ -77,72 +81,118 @@ body {
 #hamburgerBtn:hover {
   cursor: pointer;
 }
-.accordion {
-  background-color: #848377;
-  color: #F1F2EF;
-  padding: 1.9rem;
-  width:80%;
-  border: none;
-  text-align: left;
-  outline: none;
-  transition: 0.4s;
-  margin-top:1em;
-        margin-left:3rem;
-}
-.active, .accordion:hover {
-  background-color: #676555; 
-}
-.panel {
-  padding: 0 1.125rem;
-  display: none;
-  background-color: #F1F2EF;
-  overflow: hidden;
-} 
-.accordcont {
-    margin-top:2.5rem;
-}
-.thisbutton {
-margin-top:2rem;
-text-align:center;
-background-color:#798897;
-border:none;
-color: #FFF4F3;
-}
-.thisbutton:hover
-{
-  background-color:#E16365;
-border:none;
-color: #FFF4F3;
-text-decoration:none;
+
+.wrapper {
+  text-align: center;
 }
 
+.thisbutton {
+  margin-top: 4rem;
+  text-align: center;
+  background-color: #848377;
+  border: none;
+  color: #F1F2EF;
+  justify-content: center;
+}
+
+.thisbutton:hover {
+  background-color: #689E9B;
+  border: none;
+  color: #F1F2EF;
+  text-decoration: none;
+}
+
+button.accordion {
+  width: 100%;
+  background-color: #689E9B;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #181719;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+button.accordion:after {
+  content: '\f055';
+  font-family: "fontawesome";
+  font-size: 14px;
+  float: right;
+
+}
+
+button.accordion.is-open:after {
+  content: '\f056';
+}
+
+button.accordion:hover,
+button.accordion.is-open {
+  background-color: #848377;
+  color: #F1F2EF;
+  -webkit-transition: background-color 300ms linear, color 1s linear;
+  -moz-transition: background-color 300ms linear, color 1s linear;
+  -o-transition: background-color 300ms linear, color 1s linear;
+  -ms-transition: background-color 300ms linear, color 1s linear;
+  transition: background-color 300ms linear, color 1s linear;
+}
+
+.accordion-content {
+  background-color: #F1F2EF;
+  padding: 0 1.2rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+.accordioncontainer {
+  margin-top: 3rem;
+  width: 80%;
+}
+i {
+    align-items:right;
+    color:#689E9B;
+    text-decoration:none;
+}
+i:hover {
+    color:#181719;
+    text-decoration:underline;
+    -webkit-transition: background-color 300ms linear, color 1s linear;
+  -moz-transition: background-color 300ms linear, color 1s linear;
+  -o-transition: background-color 300ms linear, color 1s linear;
+  -ms-transition: background-color 300ms linear, color 1s linear;
+  transition: background-color 300ms linear, color 1s linear;
+}
 @media only screen and (max-width: 768px) {
 
   body {
     margin-left: 0px;
   }
+
   #sideMenu {
-    width: 100vw; 
+    width: 100vw;
     transform: translateX(-1000px);
     transition: 500ms transform;
   }
-  
+
   #sideMenu.open {
     transform: translateX(0);
   }
-  
-  .nav-items > li{
+
+  .nav-items>li {
     list-style-type: none;
     margin-bottom: 0.625rem;
     text-align: center;
   }
-  
+
   #hamburgerBtn {
     display: inline-block;
     z-index: 10;
   }
-  .accordion {
-      margin-left:0;
-      width:100%
+
+  .accordioncontainer {
+    margin-left: 0;
+    width: 100%
   }
 }
