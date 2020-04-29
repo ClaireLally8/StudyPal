@@ -3,22 +3,20 @@ hamburgerBtn.addEventListener('click', () => {
   sideMenu.classList.toggle('open');
 })
 
-  
-var acc = document.getElementsByClassName("accordion");
-var i;
+/** code by webdevtrick ( https://webdevtrick.com ) **/
+var accordions = document.getElementsByClassName("accordion");
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
+for (var i = 0; i < accordions.length; i++) {
+  accordions[i].onclick = function() {
+    this.classList.toggle('is-open');
 
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      // accordion is currently open, so close it
+      content.style.maxHeight = null;
     } else {
-      panel.style.display = "block";
+      // accordion is currently closed, so open it
+      content.style.maxHeight = content.scrollHeight + "px";
     }
-  });
+  }
 }
