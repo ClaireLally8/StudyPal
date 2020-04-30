@@ -65,7 +65,6 @@ def logout():
 def modules():
     email = session['email']
     topics = list(mongo.db.topics.find())
-    print(topics)
     return render_template("modules.html", 
                            subjects=mongo.db.subjects.find(), subjectList=mongo.db.subjects.find(), topics = list(mongo.db.topics.find()))
 
@@ -81,14 +80,15 @@ def add_topic():
 
 @app.route('/delete/<topics_id>')
 def delete(topics_id):
+    print(topics_id)
     mongo.db.topics.remove({'_id': ObjectId(topics_id)})
     return redirect(url_for('modules'))
 
 @app.route('/notes')
 def notes():
     email = session['email']
-    return render_template("notes.html", 
-                           notes=mongo.db.notes.find({'email' : email}))
+    return render_template("notes.html", subjects=mongo.db.subjects.find(), 
+                           notes=mongo.db.notes.find())
 
 @app.route('/add_notes', methods=['POST'])
 def add_notes():
