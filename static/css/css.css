@@ -145,6 +145,21 @@ button.accordion.is-open {
   margin-top: 3rem;
   width: 80%;
 }
+.fancy-checkbox input[type="checkbox"] {
+    display: none;
+}
+ 
+.fancy-checkbox span:before {
+    font-family: "FontAwesome";
+    font-style: normal;
+    content: '\f10c';
+    font-size:1.5rem;
+    color: green;
+}
+ 
+.fancy-checkbox input[type="checkbox"]:checked ~ span:before {
+    content: '\f05d';
+}
 i {
     align-items:right;
     color:#689E9B;
