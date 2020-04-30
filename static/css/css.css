@@ -145,21 +145,6 @@ button.accordion.is-open {
   margin-top: 3rem;
   width: 80%;
 }
-.fancy-checkbox input[type="checkbox"] {
-    display: none;
-}
- 
-.fancy-checkbox span:before {
-    font-family: "FontAwesome";
-    font-style: normal;
-    content: '\f10c';
-    font-size:1.5rem;
-    color: green;
-}
- 
-.fancy-checkbox input[type="checkbox"]:checked ~ span:before {
-    content: '\f05d';
-}
 i {
     align-items:right;
     color:#689E9B;
@@ -174,6 +159,29 @@ i:hover {
   -ms-transition: background-color 300ms linear, color 1s linear;
   transition: background-color 300ms linear, color 1s linear;
 }
+.new{
+    display: inline-block;
+    box-shadow: 0px 0px 2px #888;
+    background-color: #C3C3C3;
+    color: #8F8F8F;
+    width: 55px;
+    height: 55px;
+    padding: 20px 0;
+    border-radius: 50%;
+    font-size: 38px;
+    text-align: center;
+    vertical-align: middle;
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    margin-top: 0;
+    margin-bottom: 2.5px;
+
+}
+.alignment {
+    line-height: 16px;
+}
+
 @media only screen and (max-width: 768px) {
 
   body {
