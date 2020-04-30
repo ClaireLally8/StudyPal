@@ -69,13 +69,6 @@ def modules():
     return render_template("modules.html", 
                            subjects=mongo.db.subjects.find(), subjectList=mongo.db.subjects.find(), topics = list(mongo.db.topics.find()))
 
-@app.route('/modules_lessons')
-def modules_lessons():
-    email = session['email']
-    
-    return render_template("modules.html", subjects=mongo.db.subjects.find(),
-                           topics = list(mongo.db.topics.find()))
-
 @app.route('/add_subject', methods=['POST'])
 def add_subject():
     mongo.db.subjects.insert({'subject' : request.form['subjects'],  'email' : session['email']})
@@ -84,12 +77,12 @@ def add_subject():
 @app.route('/add_topic', methods=['POST'])
 def add_topic():
     mongo.db.topics.insert({'topic' : request.form['topic'], 'subject' : request.form['subject'],  'email' : session['email']})
-    return redirect(url_for('modules_lessons'))
+    return redirect(url_for('modules'))
 
 @app.route('/delete/<topics_id>')
 def delete(topics_id):
     mongo.db.topics.remove({'_id': ObjectId(topics_id)})
-    return redirect(url_for('modules_lessons'))
+    return redirect(url_for('modules'))
 
 @app.route('/notes')
 def notes():
