@@ -92,7 +92,7 @@ def notes():
 
 @app.route('/add_notes', methods=['POST'])
 def add_notes():
-    mongo.db.notes.insert({'note' : request.form['note'], 'title' : request.form['title'], 'email' : session['email']})
+    mongo.db.notes.insert({'subject' : request.form['subject'],'note' : request.form['note'], 'title' : request.form['title'], 'email' : session['email']})
     return redirect(url_for('notes'))
 
 @app.route('/delete_note/<note_id>')
