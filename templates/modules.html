@@ -5,7 +5,7 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="wrapper">
       <button type="button" class="btn btn-link thisbutton" data-toggle="modal" data-target=".bd-example-modal-xl">New Subject</button>
-      <button type="button" class="btn btn-link thisbutton" data-toggle="modal" data-target=".bd-example-modal-lg">New Topic</button>
+
     </div>
       <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
@@ -67,12 +67,6 @@
       <div class="col-4">
       Topic
       </div>
-      <div class ="col-4">
-      Completed
-      </div>
-      <div class="col-4">
-      <i class="far fa-trash-alt"></i>
-      </div>
       </div>
       <hr>
       <br>
@@ -83,13 +77,9 @@
       <p>{{topic.topic}}</p>
       </div>
       <div class="col-4">
-      <label class="fancy-checkbox">
-        <input type="checkbox" />
-        <span></span>
-    </label>
       </div>
       <div class="col-4">
-       <a href="{{url_for('delete', topics_id=topics._id)}}"><i class="far fa-trash-alt"></i></a>
+       <a href="{{url_for('delete', topics_id=topic._id)}}"><i class="far fa-trash-alt"></i></a>
       </div>
        </div>
        <hr>
