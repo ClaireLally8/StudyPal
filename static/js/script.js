@@ -2,7 +2,6 @@ const hamburgerBtn = document.getElementById('hamburgerBtn');
 hamburgerBtn.addEventListener('click', () => {
   sidemenunav.classList.toggle('open');
 })
-
 /** code by webdevtrick ( https://webdevtrick.com ) **/
 var accordions = document.getElementsByClassName("accordion");
 
