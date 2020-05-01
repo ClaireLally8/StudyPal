@@ -7,13 +7,12 @@ Colour Scheme is as follows:
 #676555
 #181719
 */
-
 html {
   min-height: 100vh;
 }
 
 body {
-  margin-left: 15.625rem;
+  margin-left: 15.625rem!important;
   position: relative;
   background-color: #F1F2EF;
 }
@@ -25,14 +24,14 @@ body {
   text-align: center;
 }
 
-#sideMenu {
+#sidemenunav {
   width: 15.625rem;
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   background-color: #181719;
-  color: #F1F2EF;
+  color: #F1F2EF!important;
   padding: 1.875rem 1.25rem;
   display: flex;
   flex-direction: column;
@@ -40,28 +39,28 @@ body {
   opacity: 0.99;
   z-index: 1;
 }
-.nav-items {
+.navbaritems {
   padding-inline-start: 0;
+  color: #F1F2EF!important;
 }
-.nav-items>li {
+.navbaritems >li {
   list-style-type: none;
   margin-bottom: 0.625;
-  text-align: left;
+  text-align: center;;
 }
-.nav-items>li:hover {
+.navbaritems>li:hover {
   transform: scale(1.01);
 
 }
-.menulist {
-  text-decoration: none;
-  color: #F1F2EF;
-}
-.green {
+.underlink{
   color: #689E9B !important;
   text-decoration: underline;
 }
-.menulist:hover {
+.underlink:hover{
+  color: white !important;
   text-decoration: underline;
+}
+.menulist:hover {
   color: #F1F2EF;
 }
 #hamburgerBtn {
@@ -181,24 +180,24 @@ i:hover {
 .alignment {
     line-height: 16px;
 }
-
 @media only screen and (max-width: 768px) {
 
   body {
-    margin-left: 0px;
+    margin-left: 0!important;
+    width:100%;
   }
 
-  #sideMenu {
+  #sidemenunav {
     width: 100vw;
     transform: translateX(-1000px);
     transition: 500ms transform;
   }
 
-  #sideMenu.open {
+  #sidemenunav.open {
     transform: translateX(0);
   }
 
-  .nav-items>li {
+  .navbaritems>li {
     list-style-type: none;
     margin-bottom: 0.625rem;
     text-align: center;

@@ -9,32 +9,33 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
 		integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/css.css') }}" type="text/css" />
 </head>
 <body>
     <div class="container">
   <div id="hamburgerBtn">&#9776</div>
-  <nav id="sideMenu">
-    <div class="nav-brand">
-      <p>Your Study Planner</a></p>
+  <div id="sidemenunav">
+    <div class="navbarbrand">
+      <p>Your Study Planner</p>
     </div>
-    <ul class="nav-items">
-      <li><a class="menulist" href="{{ url_for('modules') }}">Modules</a></li>
-      <li><a class="menulist" href="{{ url_for('notes') }}">Notes</a></li>
+    <ul class="navbaritems">
+      <li><a class="navbaritems" href="{{ url_for('modules') }}">Modules</a></li>
+      <li><a class="navbaritems" href="{{ url_for('notes') }}">Notes</a></li>
     </ul>
-    <div class="footer"> 
-    <p><strong><a class="green" href="{{ url_for('help') }}">Help</a></strong></p>
-     <p><strong><a class="green" href="{{ url_for('logout') }}">Logout</a></strong></p>    
+    <div class="menubarfooter"> 
+    <p><strong><a class="underlink" href="{{ url_for('help') }}">Help</a></strong></p>
+     <p><strong><a class="underlink" href="{{ url_for('logout') }}">Logout</a></strong></p>    
     </div>
-  </nav>
+  </div>
 </div>
  {% block body %}{% endblock %}
  
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 

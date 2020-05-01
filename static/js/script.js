@@ -1,6 +1,6 @@
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 hamburgerBtn.addEventListener('click', () => {
-  sideMenu.classList.toggle('open');
+  sidemenunav.classList.toggle('open');
 })
 
 /** code by webdevtrick ( https://webdevtrick.com ) **/
