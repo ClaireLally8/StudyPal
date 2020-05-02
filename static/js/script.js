@@ -21,5 +21,8 @@ for (var i = 0; i < accordions.length; i++) {
 }
 
  $(document).ready(function(){
-    $('.modal').modal();
+    $('.subjectmodal').modal();
+    $('.topicmodal').modal();
+    $('select').formSelect();
+    $('.tooltipped').tooltip();
   });
