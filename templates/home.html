@@ -18,9 +18,9 @@
     <nav>
       <div class="nav-wrapper">
         <ul id="nav-mobile" class="right">
-          <li><a href="{{ url_for('base') }}">Home</a></li>
-          <li><a class="modal-trigger" href="#modal3">Login</a></li>
-          <li><a href="{{ url_for('register') }}">Register</a></li>
+          <li><a class = "navlink" href="{{ url_for('base') }}">Home</a></li>
+          <li><a class="modal-trigger navlink" href="#modal3">Login</a></li>
+          <li><a class = "navlink" href="{{ url_for('register') }}">Register</a></li>
         </ul>
       </div>
     </nav>
@@ -126,7 +126,7 @@
             </div>
             <button class="button waves-effect btn" type="submit">Login</button>
           </form>
-          <div class="reghere">
+          <div class="redirect">
             <strong>
               Don't have an account? <a class="link" href="{{ url_for('register') }}">Sign up here</a>.
             </strong></div>
