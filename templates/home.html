@@ -120,11 +120,11 @@
           <form class="col s12" method="POST" action="{{ url_for('login') }}">
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" type="email" class="validate" name="email">
+                <input id="email" type="email" class="validate" name="email" required>
                 <span class="helper-text" data-error="wrong" data-success="right">Your Email Address</span>
               </div>
             </div>
-            <button class="btn waves-effect waves-light" type="submit">Login</button>
+            <button class="button waves-effect btn" type="submit">Login</button>
           </form>
           <div class="reghere">
             <strong>
