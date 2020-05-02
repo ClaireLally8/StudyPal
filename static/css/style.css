@@ -1,14 +1,71 @@
-/* The CSS for the login and register pages.  Split from the logged-in pages. 
+/* The CSS for the login and register pages.  Split from the logged-in pages.
 
-Colour Scheme is as follows:
-#F1F2EF
-#689E9B
-#848377
-#676555
-#181719
-*/
+Colour Scheme: 
+253443
+37475F
+B3C1CE
+FBFCFB
+CDA21F
+
+CSS is laid out by page. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
 body {
-    background-color:#F1F2EF;
+    color:#FBFCFB;
+    background-color:#FBFCFB;
+}
+.divider {
+  max-width: 5rem;
+  border-width: .2rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-top: 1px solid #253443;
+}
+/* HOME PAGE STYLING */ 
+
+.subtext {
+    padding-top:6rem;
+    font-family:Montserrat;
+    font-size:1.5rem;
+    padding-left:1.4rem;
+    padding-right:0.8rem;
+}
+.code {
+    color:#37475F;
+    text-align:center;
+    padding-top:4rem;
+    font-size:8rem;
+}
+.byline {
+    color:#37475F;
+    text-align:center;
+    font-family: Montserrat;
+    padding-top:2.1rem;
+    text-transform: uppercase;
+}
+.subline
+{
+    color:#37475F;
+    font-family:Montserrat;
+    font-size:1rem;
+    text-align:center;
+    padding-top:0.8rem;
+}
+.howitworks {
+    padding-top:8rem;
+    padding-bottom:9rem;
+}
+.homepage {
+    background-color: #37475F;
+    padding-bottom:5rem;
+}
+.page-footer {
+    background-color:#37475F;
+    color:#FBFCFB;
 }
 .flashes {
     text-decoration:none;
@@ -18,9 +75,19 @@ body {
     font-weight:bold;
     font-size:1.4rem;
 }
+.titles {
+    padding-bottom:4rem;
+    padding-top:4rem;
+}
+.nav-wrapper {
+    background-color: #FBFCFB;
+}
+a {
+    color:#37475F!important;
+}
 .nameindex {
 text-align:center;
-padding-top:2.75em;
+padding-top:1.4em;
 padding-bottom:3rem;
 
 }
@@ -39,7 +106,7 @@ padding-bottom:3rem;
 .logincontainer {
 padding-left:2rem;
 padding-right:2rem;
-padding-top:3rem;
+padding-top:1.4rem;
 text-align:center;
 padding-bottom:5rem;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
