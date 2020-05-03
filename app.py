@@ -7,6 +7,7 @@ from bson.objectid import ObjectId
 from os import path
 if path.exists("env.py"):
     import env
+    import bcrypt
 
 app = Flask(__name__)
 
@@ -22,7 +23,11 @@ def index():
     if 'email' in session:
         return redirect(url_for('modules'))
 
-    return render_template('login.html')
+    return render_template('home.html')
+
+@app.route('/base')
+def base():
+        return render_template('home.html')
 
 @app.route('/home')
 def home():
@@ -37,8 +42,9 @@ def login():
         session['email'] = request.form['email']
         return redirect(url_for('modules'))
 
-    flash('Email address not found! Try signing up!')
-    return render_template('login.html')
+    flash('Email address not found! Try signing up here!')
+    return redirect(url_for('register'))
+    
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
@@ -59,14 +65,14 @@ def register():
 @app.route('/logout')
 def logout():
     session['email'] = None
-    return render_template('login.html')
+    return render_template('home.html')
 
 @app.route('/modules')
 def modules():
     email = session['email']
     topics = list(mongo.db.topics.find())
     return render_template("modules.html", 
-                           subjects=mongo.db.subjects.find(), subjectList=mongo.db.subjects.find(), topics = list(mongo.db.topics.find()))
+                           subjects=mongo.db.subjects.find({'email' : session['email']}), subjectList=mongo.db.subjects.find({'email' : session['email']}), topics = list(mongo.db.topics.find({'email' : session['email']})))
 
 @app.route('/add_subject', methods=['POST'])
 def add_subject():
@@ -87,8 +93,8 @@ def delete(topics_id):
 @app.route('/notes')
 def notes():
     email = session['email']
-    return render_template("notes.html", subjects=mongo.db.subjects.find(), 
-                           notes=mongo.db.notes.find())
+    return render_template("notes.html", subjects=mongo.db.subjects.find({'email' : session['email']}), 
+                           notes=mongo.db.notes.find({'email' : session['email']}))
 
 @app.route('/add_notes', methods=['POST'])
 def add_notes():
