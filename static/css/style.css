@@ -25,10 +25,22 @@ body {
   border: none;
   border-top: 1px solid #253443;
 }
-/* HOME PAGE STYLING */ 
 
+/* NAVBAR STYLING */
+
+.nav-wrapper {
+    background-color: #FBFCFB;
+}
+.navlink{
+    color:#37475F!important;
+}
+/* HOME PAGE STYLING */ 
+.titles {
+    padding-bottom:4rem;
+    padding-top:4rem;
+}
 .subtext {
-    padding-top:6rem;
+    padding-top:2rem;
     font-family:Montserrat;
     font-size:1.5rem;
     padding-left:1.4rem;
@@ -67,6 +79,28 @@ body {
     background-color:#37475F;
     color:#FBFCFB;
 }
+
+/* MODAL STYLING */
+
+.modal-content {
+    color: #37475F;
+    background-color:transparent;
+}
+#modal3 {
+    text-align:center;
+}
+.link {
+    color :#cda21f!important;
+    text-decoration:underline;
+}
+.btn {
+    background-color: #253443;
+    color:#FBFCFB;
+}
+.btn:hover {
+    background-color:#cda21f;
+    color:#37475F;
+}
 .flashes {
     text-decoration:none;
     list-style:none;
@@ -75,78 +109,39 @@ body {
     font-weight:bold;
     font-size:1.4rem;
 }
-.titles {
-    padding-bottom:4rem;
-    padding-top:4rem;
-}
-.nav-wrapper {
-    background-color: #FBFCFB;
-}
-a {
-    color:#37475F!important;
-}
-.nameindex {
-text-align:center;
-padding-top:1.4em;
-padding-bottom:3rem;
-
-}
-.emailinput { 
-    border:none;
-    border-bottom: 2px #676555 solid;
-    background-color: transparent;
-
-}
-.emailinput:active { 
-    border:none;
-    border-bottom: 2px #676555 solid;
-    background-color: transparent;
-
-}
-.logincontainer {
-padding-left:2rem;
-padding-right:2rem;
-padding-top:1.4rem;
-text-align:center;
-padding-bottom:5rem;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.redirect {
+    padding-top:1rem;
+    color:#253443;
+    text-align:center;
 }
 
-.loginbtn {
-margin-top:2rem;
-text-align:center;
-background-color:#848377;
-border:none;
-color: #F1F2EF;
+/* REGISTER PAGE */
+.reghead {
+    color:#253443;
+    text-align:center;
+    padding-bottom:3rem;
 }
-.loginbtn:hover
-{
-  background-color:#689E9B;
-border:none;
-color: #F1F2EF;
-text-decoration:none;
+.background {
+    background-color:#37475F;
+    position: relative;
 }
-.reghere {
-padding-top:5rem;
-text-align:center;
+.overlay {
+    position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:#FBFCFB;
+  padding: 7rem 1rem 8rem 1rem;
 }
-.bottom{
-    padding-top:0.75rem;
-}
-.link {
-    color: #689E9B;
-}
-.link:hover {
-    color: #689E9B;
-    text-decoration:underline
+.regimg {
+    padding-top:2rem;
 }
 
-/* Media query to remove shadow and make input section larger */
-@media screen and (max-width: 576px) {
-  .logincontainer {
-      box-shadow: none;
-  }
-  .emailinput {
-      width:100%;
-  }
+/* MEDIA QUERY */
+
+@media screen and (max-width: 860px) { 
+    .regimg {
+        visibility: hidden;
+        display:none;
+    }
 }
