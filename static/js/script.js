@@ -1,3 +1,10 @@
+ $(document).ready(function(){
+    $('.subjectmodal').modal();
+    $('.loginmodal').modal();
+    $('.topicmodal').modal();
+    $('select').formSelect();
+    $('.tooltipped').tooltip();
+  });
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 hamburgerBtn.addEventListener('click', () => {
   sidemenunav.classList.toggle('open');
@@ -19,10 +26,3 @@ for (var i = 0; i < accordions.length; i++) {
     }
   }
 }
-
- $(document).ready(function(){
-    $('.subjectmodal').modal();
-    $('.topicmodal').modal();
-    $('select').formSelect();
-    $('.tooltipped').tooltip();
-  });
