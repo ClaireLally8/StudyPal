@@ -104,7 +104,7 @@ body {
 .flashes {
     text-decoration:none;
     list-style:none;
-    color:#689E9B;
+    color: #253443;
     text-decoration:underline;
     font-weight:bold;
     font-size:1.4rem;
@@ -132,6 +132,8 @@ body {
   transform: translate(-50%, -50%);
   background-color:#FBFCFB;
   padding: 7rem 1rem 8rem 1rem;
+  box-shadow: 10px 10px 10px black;
+  opacity:0.9;
 }
 .regimg {
     padding-top:2rem;
@@ -139,9 +141,13 @@ body {
 
 /* MEDIA QUERY */
 
-@media screen and (max-width: 860px) { 
+@media screen and (max-width: 750px) { 
     .regimg {
         visibility: hidden;
         display:none;
+    }
+    .overlay {
+        box-shadow:none;
+        opacity:1;
     }
 }

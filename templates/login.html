@@ -1,30 +1,28 @@
 {% extends "index.html" %}
 {% block body %}
-
-<div class="container logincontainer">
-  <div class="details">
-    <form method = "POST" action="{{ url_for('login') }}">
-    <div class="col-lg-6 offset-lg-3 col-sm-12">
-    {% with messages = get_flashed_messages() %}
-{% if messages %}
-<ul class=flashes>
-  {% for message in messages %}
-  <li>{{ message }}</li>
-  {% endfor %}
-</ul>
-{% endif %}
-{% endwith %}
-      <div class="form-group">
-        <label for="exampleInputEmail1">Enter your email address to login</label>
-        <input type="email" name="email" class="form-control emailinput" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-        <small id="emailHelp" class="form-text text-muted bottom">We'll never share your email with anyone else.</small>
-      </div>
-      <button type="submit" class="btn btn-link loginbtn">Login</button>
-    </div>
-    </form>
-  </div>
-  <div class="reghere"><strong>
-    Don't have an account? <a class="link" href="{{ url_for('register') }}">Sign up here</a>.
-  </strong></div>
+<div class="container-fluid background">
+  <img src="{{ url_for('static', filename='imgs/login.svg') }}" class="img-fluid regimg">
 </div>
+<div class="container overlay">
+<h4 class="reghead">Login to your account</h4>
+  <div class="details">
+    <form class="col s12" method="POST" action="{{ url_for('login') }}">
+    <div class="col-lg-6 offset-lg-3 col-sm-12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate" name="email" required>
+                <span class="helper-text" data-error="wrong" data-success="right">Your Email Address</span>
+              </div>
+            </div>
+            <button class="button waves-effect btn" type="submit">Login</button>
+    </div></form>
+        
+  </div>
+  <div class="redirect">
+  <strong>
+      Already have an account? <a class="link" href="{{ url_for('home') }}">Login here</a>.</strong>
+  </div>
+</div>
+</div>
+
 {% endblock %}
