@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 {% block body %}
 <div class="container-fluid">
-<h2 class="subheading center">Your subjects</h2>
+<h2 class="subheading center">subjects</h2>
+<p class="subline"> Click the button at the bottom of the page to create a subject, you can then add your topics by clicking the + icon. 
+</p>
+<hr class="divider">
 </div>
 <div class="container-fluid accordioncontainer">
   {% for subject in subjects %}
@@ -60,7 +63,7 @@
           <input id="subjects" name="subjects" type="text" required>
         </div>
         <div class="modal-footer">
-          <button class="modal-close waves-effect waves-green btn-flat" type="submit">Add Subject</button>
+          <button class="modal-close button waves-effect btn" type="submit">Add Subject</button>
         </div>
       </form>
     </p>
@@ -86,7 +89,9 @@
           <br><br>
           <label for="subject_name">Topic Name</label>
           <input id="topic_name" name="topic" type="text" required>
-          <button class="modal-close waves-effect waves-green btn-flat" type="submit">Add Topic</button>
+          <div class="modal-footer">
+          <button class="modal-close button waves-effect btn" type="submit">Add Topic</button>
+        </div>
         </div>
       </form>
     </p>
