@@ -118,6 +118,7 @@ def update_notes(note_id):
     {
         'title':request.form.get('title'),
         'note':request.form.get('note'),
+        'email':session['email'],
     })
     return redirect(url_for('notes'))
 
