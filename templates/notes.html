@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block body %}
-<h2 class="heading center-align"> Your Notes </h2>
+<div class="container-fluid">
+<h2 class="subheading center">notes</h2>
+<p class="subline"> Click the button at the bottom of the page to create a note, you can then edit and delete your notes
+</p>
+<hr class="divider">
+</div>
 <div class="fixed-action-btn">
   <a class="btn-floating btn-large modal-trigger floating" href="#modal3">
     <i class="large material-icons">post_add</i>
@@ -46,9 +51,11 @@
         </div>
         <div class="input-field">
           <label for="icon_telephone">Notes</label>
-          <textarea name="note" id="note"></textarea>
+          <textarea name="note" id="note" class="large"></textarea>
         </div>
-        <button class="btn btn-link" type="submit">Add Note</button><br><br><br>
+        <div class="modal-footer">
+          <button class="modal-close button waves-effect btn" type="submit">Add Note</button>
+        </div>
       </form>
     </p>
   </div>
