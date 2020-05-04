@@ -2,8 +2,10 @@
     $('.subjectmodal').modal();
     $('.loginmodal').modal();
     $('.topicmodal').modal();
+    $('.notesmodal').modal();
     $('select').formSelect();
     $('.tooltipped').tooltip();
+    $('.dropdown-trigger').dropdown();
   });
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 hamburgerBtn.addEventListener('click', () => {
