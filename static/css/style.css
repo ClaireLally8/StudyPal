@@ -9,6 +9,7 @@ CDA21F
 
 CSS is laid out by page. */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Libre+Baskerville&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -30,21 +31,36 @@ body {
 
 .nav-wrapper {
     background-color: #FBFCFB;
+    font-family:montserrat;
 }
 .navlink{
     color:#37475F!important;
 }
 /* HOME PAGE STYLING */ 
+.homehead {
+    font-family: "hind";
+    color: #FBFCFB;
+    font-size:5rem;
+    letter-spacing:0.2rem;
+    text-transform: uppercase;
+}
+.homebase {
+    font-family: Montserrat;
+    font-size:2rem;
+    padding-top:2rem;
+    letter-spacing:0.2rem;
+}
 .titles {
     padding-bottom:4rem;
     padding-top:4rem;
 }
 .subtext {
-    padding-top:2rem;
-    font-family:Montserrat;
+    padding-top:3rem;
+    font-family:"hind";
     font-size:1.5rem;
     padding-left:1.4rem;
     padding-right:0.8rem;
+    letter-spacing:2px;
 }
 .code {
     color:#37475F;

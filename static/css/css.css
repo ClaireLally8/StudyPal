@@ -9,7 +9,8 @@ CDA21F
 
 CSS is organised by pages */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Libre+Baskerville&display=swap');
 html {
   min-height: 100vh;
 }
@@ -18,6 +19,28 @@ body {
   margin-left: 15.625rem!important;
   position: relative;
   background-color: #FBFCFB;
+}
+.subheading {
+    font-family:Montserrat;
+    font-size:3rem;
+    color: #253443;
+    text-transform:uppercase;
+    padding-bottom:2rem;
+}
+.subline {
+    font-family: hind;
+    letter-spacing:1px;
+    color:#253443;
+    text-align:center;
+    padding-bottom:2rem;
+}
+.divider {
+  max-width: 5rem;
+  border-width: .2rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-top: 1px solid #253443;
 }
 /* NAVBAR */
 .container {
@@ -150,6 +173,28 @@ button.accordion.is-open {
 }
 .dropdown-content li>span:hover {
     background-color:#B3C1CE;
+}
+/* MODAL STYLING */
+.modal .modal-content {
+    font-family: "Montserrat";
+    text-align:center;
+    background-color: #FBFCFB;
+    color:#253443;
+}
+.modal-footer {
+    background-color: #B3C1CE;
+    color:#253443;
+}
+.btn {
+    background-color: #253443;
+    color:#FBFCFB;
+}
+.btn:hover {
+    background-color:#cda21f;
+    color:#37475F;
+}
+.large {
+    height:6rem;
 }
 @media only screen and (max-width: 768px) {
 
