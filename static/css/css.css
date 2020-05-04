@@ -1,12 +1,15 @@
 /* The CSS for the modules and notes pages.  Split from the log in/register pages. 
 
 Colour Scheme is as follows:
-#F1F2EF
-#689E9B
-#848377
-#676555
-#181719
-*/
+253443
+37475F
+B3C1CE
+FBFCFB
+CDA21F
+
+CSS is organised by pages */
+
+
 html {
   min-height: 100vh;
 }
@@ -14,9 +17,9 @@ html {
 body {
   margin-left: 15.625rem!important;
   position: relative;
-  background-color: #F1F2EF;
+  background-color: #FBFCFB;
 }
-
+/* NAVBAR */
 .container {
   padding: 2.5rem;
   margin: 0 auto;
@@ -30,81 +33,58 @@ body {
   top: 0;
   left: 0;
   height: 100vh;
-  background-color: #181719;
-  color: #F1F2EF!important;
+  background-color: #253443;
+  color: #FBFCFB!important;
   padding: 1.875rem 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   opacity: 0.99;
-  z-index: 1;
+  z-index: 1000;
 }
 .navbaritems {
   padding-inline-start: 0;
   color: #F1F2EF!important;
-}
-.navbaritems >li {
-  list-style-type: none;
+    list-style-type: none;
   margin-bottom: 0.625;
-  text-align: center;;
+  text-align: center;
 }
-.navbaritems>li:hover {
-  transform: scale(1.01);
 
+.navbaritems:hover {
+  transform: scale(1.01);
+  color: #CDA21F!important;
+  transition: background-color 0.5s linear;
 }
 .underlink{
-  color: #689E9B !important;
-  text-decoration: underline;
+  color: #CDA21F!important;
 }
 .underlink:hover{
-  color: white !important;
+  color: #F1F2EF!important;
   text-decoration: underline;
-}
-.menulist:hover {
-  color: #F1F2EF;
+  transition: background-color 0.2s linear;
 }
 #hamburgerBtn {
   display: none;
   position: absolute;
   top: 1.875rem;
   right: 1.875rem;
+
 }
 #hamburgerBtn:hover {
   cursor: pointer;
 }
-.wrapper {
-  text-align: center;
-}
-.thisbutton {
-  margin-top: 4rem;
-  text-align: center;
-  background-color: #848377;
-  border: none;
-  color: #F1F2EF;
-  justify-content: center;
-}
 
-.thisbutton:hover {
-  background-color: #689E9B;
-  border: none;
-  color: #F1F2EF;
-  text-decoration: none;
-}
-.modalbutton {
-    text-align:center;
-}
-.modal-header .modal-content {
-    background-color:#F1F2EF;
-}
+/* MODULES PAGE */ 
+
 button.accordion {
   width: 100%;
-  background-color: #689E9B;
+  background-color: #37475F;
   border: none;
   outline: none;
   text-align: left;
   padding: 15px 20px;
   font-size: 18px;
-  color: #181719;
+  color: #B3C1CE;
   cursor: pointer;
   transition: background-color 0.2s linear;
 }
@@ -116,15 +96,13 @@ button.accordion:after {
   float: right;
 
 }
-
 button.accordion.is-open:after {
   content: '\f056';
 }
-
 button.accordion:hover,
 button.accordion.is-open {
-  background-color: #848377;
-  color: #F1F2EF;
+  background-color: #CDA21F;
+  color: #253443;
   -webkit-transition: background-color 300ms linear, color 1s linear;
   -moz-transition: background-color 300ms linear, color 1s linear;
   -o-transition: background-color 300ms linear, color 1s linear;
@@ -133,7 +111,7 @@ button.accordion.is-open {
 }
 
 .accordion-content {
-  background-color: #F1F2EF;
+  background-color: #FBFCFB;
   padding: 0 1.2rem;
   max-height: 0;
   overflow: hidden;
@@ -144,41 +122,34 @@ button.accordion.is-open {
   margin-top: 3rem;
   width: 80%;
 }
-i {
+.accordionicon {
     align-items:right;
-    color:#689E9B;
+    color:#253443;
     text-decoration:none;
 }
-i:hover {
-    color:#181719;
-    text-decoration:underline;
-    -webkit-transition: background-color 300ms linear, color 1s linear;
-  -moz-transition: background-color 300ms linear, color 1s linear;
-  -o-transition: background-color 300ms linear, color 1s linear;
-  -ms-transition: background-color 300ms linear, color 1s linear;
-  transition: background-color 300ms linear, color 1s linear;
+.accordionicon:hover {
+    color:#CDA21F;
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
 }
-.new{
-    display: inline-block;
-    box-shadow: 0px 0px 2px #888;
-    background-color: #C3C3C3;
-    color: #8F8F8F;
-    width: 55px;
-    height: 55px;
-    padding: 20px 0;
-    border-radius: 50%;
-    font-size: 38px;
-    text-align: center;
-    vertical-align: middle;
-    transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-    margin-top: 0;
-    margin-bottom: 2.5px;
-
+.floating {
+     background-color:#CDA21F;
+        color:#FBFCFB;
 }
-.alignment {
-    line-height: 16px;
+.floating:hover {
+       background-color:#37475F;
+   -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+.dropdown-content li>span{
+    color:#253443;
+}
+.dropdown-content li>span:hover {
+    background-color:#B3C1CE;
 }
 @media only screen and (max-width: 768px) {
 
@@ -205,7 +176,7 @@ i:hover {
 
   #hamburgerBtn {
     display: inline-block;
-    z-index: 10;
+    z-index: 2000;
   }
 
   .accordioncontainer {

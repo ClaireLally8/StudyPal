@@ -17,7 +17,7 @@
       </div>
       <div class="col-4">
         <a class="modal-trigger tooltipped" data-position="bottom" data-tooltip="Add a topic" href="#modal2">
-    <i class="small material-icons">add</i>
+    <i class="small material-icons accordionicon">add</i>
   </a>
       </div>
     </div>
@@ -32,7 +32,7 @@
       <div class="col-4">
       </div>
       <div class="col-4">
-        <a href="{{url_for('delete', topics_id=topic._id)}}" class = "tooltipped" data-position="top" data-tooltip="Delete Topic"><i class="small material-icons">delete</i></a>
+        <a href="{{url_for('delete', topics_id=topic._id)}}"><i class="small material-icons accordionicon">delete</i></a>
       </div>
     </div>
     <hr>
@@ -43,12 +43,12 @@
   {% endfor %}
 </div>
 <div class="fixed-action-btn">
-  <a class="btn-floating btn-large red modal-trigger" href="#modal1">
+  <a class="btn-floating btn-large modal-trigger floating" href="#modal1">
     <i class="large material-icons">post_add</i>
   </a>
 </div>
 
-<!-- Modal Structure for adding a new subjects -->
+<!-- Modal Structure for adding a  subjects -->
 <div id="modal1" class="modal subjectmodal">
   <div class="modal-content">
     <h4>Add A Subject</h4>
@@ -74,7 +74,7 @@
 <p>
       <form action="{{ url_for('add_topic') }}" method="POST">
         <br>
-        <select id="subject" name="subject" required>
+        <select class = "dropdown" id="subject" name="subject" required>
         <option value="" disabled selected>Choose the subject</option>
         {% for sub in subjectList %}
         <option value="{{sub.subject}}">{{sub.subject}}
