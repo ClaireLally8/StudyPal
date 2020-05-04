@@ -19,7 +19,7 @@
       <div class="nav-wrapper">
         <ul id="nav-mobile" class="right">
           <li><a class = "navlink" href="{{ url_for('base') }}">Home</a></li>
-          <li><a class="modal-trigger navlink" href="#modal3">Login</a></li>
+          <li><a class = "navlink" href="{{ url_for('home') }}">Login</a></li>
           <li><a class = "navlink" href="{{ url_for('register') }}">Register</a></li>
         </ul>
       </div>
@@ -103,36 +103,6 @@
         </div>
       </div>
     </footer>
-    <!-- Modal Structure for login popup -->
-    <div id="modal3" class="modal loginmodal">
-      <div class="modal-content">
-        <h4>Login to Study-Pal</h4>
-        <p>
-          {% with messages = get_flashed_messages() %}
-          {% if messages %}
-          <ul class="flashes">
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-          {% endwith %}
-          <form class="col s12" method="POST" action="{{ url_for('login') }}">
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate" name="email" required>
-                <span class="helper-text" data-error="wrong" data-success="right">Your Email Address</span>
-              </div>
-            </div>
-            <button class="button waves-effect btn" type="submit">Login</button>
-          </form>
-          <div class="redirect">
-            <strong>
-              Don't have an account? <a class="link" href="{{ url_for('register') }}">Sign up here</a>.
-            </strong></div>
-        </p>
-      </div>
-    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
