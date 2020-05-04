@@ -122,10 +122,6 @@ def update_notes(note_id):
     })
     return redirect(url_for('notes'))
 
-@app.route('/help')
-def help():
-    return render_template('help.html')
-
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
     app.run(host=os.environ.get('IP'),
