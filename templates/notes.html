@@ -1,14 +1,26 @@
 {% extends "base.html" %}
 {% block body %}
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add a Note</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+<h2 class="heading center-align"> Your Notes </h2>
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large modal-trigger floating" href="#modal3">
+    <i class="large material-icons">post_add</i>
+  </a>
+</div>
+<div class="col-lg-8 col-sm-8 col-md-8">
+<div class="input-field s6">
+				<div class="select-wrapper">
+					<i class="material-icons prefix">filter_list</i>
+					<select id="FilterSelect">
+						<option class="filter" selected disabled>Filter Notes By Subject</option>
+					</select>
+				</div>
+			</div>
+</div>
+
+<div id="modal3" class="modal notesmodal">
+  <div class="modal-content">
+    <h4>Add Notes</h4>
+    <p>
       <form action="{{ url_for('add_notes') }}" method="POST">
         <br>
         <select id="subject" name="subject" required>
@@ -27,11 +39,12 @@
           <label for="icon_telephone">Notes</label>
           <textarea name="note" id="note"></textarea>
         </div>
-        <button class="btn btn-link thisbutton" type="submit">Add Note</button><br><br><br>
+        <button class="btn btn-link" type="submit">Add Note</button><br><br><br>
       </form>
-    </div>
+    </p>
   </div>
 </div>
+
 <div class="container-fluid">
   {% for notes in notes %}
   <div class="col-lg-3 col-md-6 col-sm-12">
