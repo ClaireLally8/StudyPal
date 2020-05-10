@@ -64,6 +64,7 @@ body {
   justify-content: space-between;
   opacity: 0.99;
   z-index: 1000;
+  font-family: "Montserrat";
 }
 .navbaritems {
   padding-inline-start: 0;
@@ -239,4 +240,18 @@ button.accordion.is-open {
 .notesicon {
     color:#CDA21F;
     text-align:right;
+}
+
+/* EDIT NOTES PAGE */
+
+.notetext {
+    padding: 4em;
+    color:red;
+}
+.notetitle {
+    padding: 4em;
+}
+.notetitle[type='text'] {
+    font-size:1.5rem;
+    color:red!important;
 }
