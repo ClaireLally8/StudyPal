@@ -1,26 +1,18 @@
 {% extends "base.html" %}
 {% block body %}
 
-<div class="container-fluid">
-    <div class = "container-fluid">
+<div class="container">
     <form action="{{ url_for('update_notes', note_id=note._id) }}" method="POST">
-      <div class="row">
-      <div class="row">
-      <div class="input-field">
-        <label for="title">Notes Name</label>
+     <div class="input-field notetitle">
             <input id="title" name="title" type="text" required value="{{note.title}}"> 
         </div>
-      <div class="input-field">
-      <label for="icon_telephone">Notes</label>
-        <textarea name="note" id="note">{{note.note}}</textarea>
+      <div class="input-field notetext">
+        <textarea name="note" id="note" class="large">{{note.note}}</textarea>
       </div>
-    </div>
-      </div>
-      <div class="row">
-        <button class="btn waves-effect waves-light" type="submit">Update
+      <div class="container-fluid">
+        <button class="btn center" type="submit">Update
         </button>
       </div>
     </form>
   </div>
-</div>
   {% endblock %}
