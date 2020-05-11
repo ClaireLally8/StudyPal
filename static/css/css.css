@@ -241,7 +241,14 @@ button.accordion.is-open {
     color:#CDA21F;
     text-align:right;
 }
-
+.notescontainer {
+    padding-top: 5rem;
+    padding-left:2rem;
+}
+.noteblock {
+    padding-bottom:1rem;
+    padding-top:1rem;
+}
 /* EDIT NOTES PAGE */
 
 .notetext {

@@ -11,9 +11,10 @@
     <i class="large material-icons">post_add</i>
   </a>
 </div>
+<div class = "container-fluid notescontainer">
 <div class="row">
   {% for notes in notes %}
-  <div class="col-lg-4 col-md-6 col-sm-12">
+  <div class="col-lg-4 col-md-6 col-sm-12 noteblock">
   <button class="accordion">
   <div class="card blend">
             <div class="card-content">
@@ -28,7 +29,9 @@
   </button>
         <div class="accordion-content"><span>{{ notes.note }}</span></div>
   </div>
+  <hr class="divider">
 {% endfor %}
+</div>
 </div>
 
 <div id="modal3" class="modal notesmodal">
