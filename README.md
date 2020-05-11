@@ -4,14 +4,37 @@ Study Pal is a fullstack application targeting students studying in a class base
 The Study-Pal application was created to assist students in the organisation of subjects and notes, so each student can keep track of their subjects and topics within these subjects. 
 The target audience, being studets, are able to create subjects and topics within one page and in another, students are able to create, update and delete notes. 
 
+## Table of Contents
+1. [**UX**](#user-experience)
+    - [**User Stories**](#user-stories)
+    - [**Strategy**](#strategy)
+    - [**Scope**](#scope)
+    - [**Structure**](#structure)
+    - [**Skeleton**](#skeleton)
+    - [**Surface**](#surface)
+
+2. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**Features Left to Implement**](#features-left-to-implement)
+
+3. [**Technologies Used**](#technologies-used)
+
+4. [**Testing**](#testing)
+
+5. [**Deployment**](#deployment)
+
+6. [**Credits**](#credits)
+    - [**Acknowledgements**](#acknowledgements)
+---
+ ## **User Experience**
+---
+### **User stories**
+- As a vistior to the site I want to have a clear idea of the applications purpose upon visiting the site.
+- As a student I want to view my personalised modules/notes on a daily/weekly basis
+- As a student, I want to be able to create notes based on any subject I have on my courseload.
+- As a student, I want to be able to track what topics I have studied and am yet to complete.
 
 
-
-This is a full stack application with a target audience of students studying for exams. 
-As a student, I discovered great difficult in storing my notes and a list of all modules and topics.  So, by creating this application, I attempted to eradicate this issue for students. 
-Students can enter their subjects, topic.  They are able to create notes and filter them by the subject, all within one single application. 
-
-UX
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:

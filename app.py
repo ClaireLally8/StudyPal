@@ -81,7 +81,7 @@ def add_subject():
 
 @app.route('/add_topic', methods=['POST'])
 def add_topic():
-    mongo.db.topics.insert({'topic' : request.form['topic'], 'subject' : request.form['subject'],  'email' : session['email']})
+    mongo.db.topics.insert({'topic' : request.form['topic'], 'subject' : request.form['subject'], "is_complete" : False , 'email' : session['email']})
     return redirect(url_for('modules'))
 
 @app.route('/delete/<topics_id>')

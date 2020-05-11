@@ -16,7 +16,7 @@
         Topic Name
       </div>
       <div class="col-4">
-        
+      Complete
       </div>
       <div class="col-4">
         <a class="modal-trigger tooltipped" data-position="bottom" data-tooltip="Add a topic" href="#modal2">
@@ -33,6 +33,25 @@
         <p>{{topic.topic}}</p>
       </div>
       <div class="col-4">
+      {% if topic.is_complete == "false" %}
+       <form action="{{ url_for('iscomplete', topics_id=topic._id) }}">
+      <p>
+      <label>
+        <input type="checkbox" class="filled-in" />
+        <span></span>
+      </label>
+    </p>
+       </form>
+       {% else %}
+        <form action="#">
+        <p>
+      <label>
+        <input type="checkbox" class="filled-in" checked="checked" />
+        <span>Filled in</span>
+      </label>
+    </p>
+       </form>
+{% endif %}
       </div>
       <div class="col-4">
         <a href="{{url_for('delete', topics_id=topic._id)}}"><i class="small material-icons accordionicon">delete</i></a>
