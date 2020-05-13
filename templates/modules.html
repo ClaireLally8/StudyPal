@@ -28,14 +28,14 @@
     <br>
     {% for topic in topics %}
     {% if subject.subject == topic.subject %}
-    <div class="row">
+    <div class="row {% if topic.complete %}isGreen{% endif %}" id="isGreen{{topic._id}}">
       <div class="col-4">
         <p>{{topic.topic}}</p>
       </div>
       <div class="col-4">
-      <p>
+      <p onclick="toggle_complete('{{topic._id}}')">
       <label>
-        <input type="checkbox" onclick="toggle_complete('{{topic._id}}')" class="filled-in" {% if topic.complete %} checked{% endif %}/>
+        <input id={{topic._id}} type="checkbox"  class="filled-in" {% if topic.complete %} checked {% endif %}/>
         <span></span>
       </label>
     </p>
