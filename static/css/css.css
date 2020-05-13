@@ -99,7 +99,9 @@ body {
 }
 
 /* MODULES PAGE */ 
-
+.isGreen {
+    color:grey;
+}
 button.accordion {
   width: 100%;
   background-color: #37475F;
