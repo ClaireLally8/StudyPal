@@ -49,17 +49,21 @@ function toggle_complete(topics_id) {
 
 function togglecheck(topics_id)
 {
-    var isGreen = "isGreen" + topics_id;
+    var isComplete = "isComplete" + topics_id;
+    var delicon = "delete" + topics_id;
     var id = document.getElementById(topics_id);
-    var section = document.getElementById(isGreen)
+    var section = document.getElementById(isComplete);
+    var del = document.getElementById(delicon);
     if (id.checked)
     {
         id.checked = false;
-        section.classList.remove("isGreen");
+        section.classList.remove("isComplete");
+        del.classList.remove("isComplete");
 
     }
     else {
         id.checked = true;
-        section.classList.add("isGreen");
+        section.classList.add("isComplete");
+        del.classList.add("isComplete");
     }
 }
