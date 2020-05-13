@@ -41,11 +41,11 @@
     </p>
       </div>
       <div class="col-4">
-        <a href="{{url_for('delete', topics_id=topic._id)}}"><i id="delete{{topic._id}}" class="small material-icons accordionicon {% if topic.complete %}isComplete{% endif %}">delete</i></a>
+        <a href="{{url_for('delete', topics_id=topic._id)}}"><i class="small material-icons accordionicon">delete</i></a>
       </div>
-      <hr>
-    <br>
     </div>
+    <hr>
+    <br>
     {% endif %}
     {% endfor %}
   </div>
