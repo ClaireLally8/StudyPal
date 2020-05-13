@@ -86,7 +86,6 @@ def add_topic():
 
 @app.route('/delete/<topics_id>')
 def delete(topics_id):
-    print(topics_id)
     mongo.db.topics.remove({'_id': ObjectId(topics_id)})
     return redirect(url_for('modules'))
 
@@ -122,28 +121,31 @@ def update_notes(note_id):
     })
     return redirect(url_for('notes'))
 
-@app.route("/toggle/<topics_id>", methods=["GET"])
+@app.route("/toggle/<topics_id>", methods=["POST"])
 def toggle_complete(topics_id):
     topics = mongo.db.topics
     topic = topics.find_one({'_id': ObjectId(topics_id)})
-    if topic.complete is False:
-        topic.update 
+    if topic['complete'] is False:
+        topics.update_one (
+        topic,
         {
 
         "$set": {
-            "complete": True
+            'complete': True,
         }  
-        }
-
+        })
     else:
-      topic.update 
-    {
-            "$set": {
-                "complete": False
-                }  
-        }
-        
-    return "Ok"
+     topics.update_one (
+        topic,
+        {
+
+        "$set": {
+            'complete': False,
+        }  
+        })
+    
+
+    return "Success"
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
