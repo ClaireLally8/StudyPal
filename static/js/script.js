@@ -47,3 +47,19 @@ function toggle_complete(topics_id) {
         return true;
 }
 
+function togglecheck(topics_id)
+{
+    var isGreen = "isGreen" + topics_id;
+    var id = document.getElementById(topics_id);
+    var section = document.getElementById(isGreen)
+    if (id.checked)
+    {
+        id.checked = false;
+        section.classList.remove("isGreen");
+
+    }
+    else {
+        id.checked = true;
+        section.classList.add("isGreen");
+    }
+}
