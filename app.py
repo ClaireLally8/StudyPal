@@ -81,7 +81,7 @@ def add_subject():
 
 @app.route('/add_topic', methods=['POST'])
 def add_topic():
-    mongo.db.topics.insert({'topic' : request.form['topic'], 'subject' : request.form['subject'], "is_complete" : False , 'email' : session['email']})
+    mongo.db.topics.insert({'topic' : request.form['topic'], 'subject' : request.form['subject'], "complete" : False , 'email' : session['email']})
     return redirect(url_for('modules'))
 
 @app.route('/delete/<topics_id>')
@@ -121,6 +121,29 @@ def update_notes(note_id):
         'email':session['email'],
     })
     return redirect(url_for('notes'))
+
+@app.route("/toggle/<topics_id>", methods=["GET"])
+def toggle_complete(topics_id):
+    topics = mongo.db.topics
+    topic = topics.find_one({'_id': ObjectId(topics_id)})
+    if topic.complete is False:
+        topic.update 
+        {
+
+        "$set": {
+            "complete": True
+        }  
+        }
+
+    else:
+      topic.update 
+    {
+            "$set": {
+                "complete": False
+                }  
+        }
+        
+    return "Ok"
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
