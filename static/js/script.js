@@ -31,12 +31,13 @@ for (var i = 0; i < accordions.length; i++) {
 
 function toggle_complete(topics_id) {
     $.ajax({
-        type: "GET",
-        url: "/toggle",
+        type: "POST",
+        url: "/toggle/"+topics_id,
         data: topics_id,
 
         success: function (response) {
-            console.log(response)
+            togglecheck(topics_id);
+            console.log(response);
         },
         error: function (error) {
             console.log(error);
