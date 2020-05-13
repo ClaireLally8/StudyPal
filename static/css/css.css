@@ -42,6 +42,7 @@ body {
   border: none;
   border-top: 1px solid #253443;
 }
+
 /* NAVBAR */
 .container {
   padding: 2.5rem;
@@ -99,9 +100,6 @@ body {
 }
 
 /* MODULES PAGE */ 
-.isGreen {
-    color:grey;
-}
 button.accordion {
   width: 100%;
   background-color: #37475F;
@@ -160,6 +158,9 @@ button.accordion.is-open {
     -ms-transition:     color 1s;
     -o-transition:      color 1s;
 }
+.accordionpadding {
+    padding:0.2rem;
+}
 .floating {
      background-color:#CDA21F;
         color:#FBFCFB;
@@ -177,6 +178,19 @@ button.accordion.is-open {
 .dropdown-content li>span:hover {
     background-color:#B3C1CE;
 }
+.isComplete {
+    color: #B3C1CE;
+       -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+.checkbox-golden[type="checkbox"].filled-in:checked + span:not(.lever):after 
+{
+    border: 2px solid #B3C1CE;  
+    background-color: #B3C1CE;
+}
+
 /* MODAL STYLING */
 .modal .modal-content {
     font-family: "Montserrat";
