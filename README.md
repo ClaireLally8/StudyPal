@@ -2,37 +2,70 @@
 
 Study Pal is a fullstack application targeting students studying in a class based or online set-up.  
 The Study-Pal application was created to assist students in the organisation of subjects and notes, so each student can keep track of their subjects and topics within these subjects. 
-The target audience, being studets, are able to create subjects and topics within one page and in another, students are able to create, update and delete notes. 
+The target audience, being studets, are able to create subjects and topics within one page and track their study by ticking off each subject as they complete. In another page, students are able to create, update and delete notes. 
 
 ## Table of Contents
-1. [**UX**](#user-experience)
+## Table of Contents
+1. [**UX**](#ux)
     - [**User Stories**](#user-stories)
-    - [**Strategy**](#strategy)
-    - [**Scope**](#scope)
-    - [**Structure**](#structure)
-    - [**Skeleton**](#skeleton)
-    - [**Surface**](#surface)
+    - [**Design**](#design)
+        - [**Framework**](#framework)
+        - [**Color Scheme**](#color-scheme)
+        - [**Icons**](#icons)
+        - [**Typography**](#typography)
+    - [**Wireframes**](#wireframes)
 
 2. [**Features**](#features)
     - [**Existing Features**](#existing-features)
     - [**Features Left to Implement**](#features-left-to-implement)
 
 3. [**Technologies Used**](#technologies-used)
+    - [**Front-End Technologies**](#front-end-technologies)
+    - [**Back-End Technologies**](#back-end-technologies)
 
 4. [**Testing**](#testing)
+    - [**Validators**](#validators)
+    - [**Compatibility**](#compatibility)
+    - [**Known Issues**](#known-issues)
 
 5. [**Deployment**](#deployment)
+    - [**Local Deployment**](#local-deployment)
+    - [**Remote Deployment**](#remote-deployment)
 
 6. [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Media**](#media)
+    - [**Code**](#code)
     - [**Acknowledgements**](#acknowledgements)
----
  ## **User Experience**
 ---
 ### **User stories**
 - As a vistior to the site I want to have a clear idea of the applications purpose upon visiting the site.
+- As a student I would like to be able to create my own account
 - As a student I want to view my personalised modules/notes on a daily/weekly basis
 - As a student, I want to be able to create notes based on any subject I have on my courseload.
 - As a student, I want to be able to track what topics I have studied and am yet to complete.
+- As a student I want to be able to remove topics and subjects at the end of studies so i can start over again.
+- As a student, I want to be able to edit and delete notes as I work through these also.
+- As a student I want to be able to mark off what lessons I’ve completed as I progress on the courseload
+
+- As an instructor, I would like to be able to view a students account using their @edu email address to view their study progress.
+
+### Design
+The overall design idea behind this was accessible.  I wanted to make Study-Pal an accessible planner, for both young students and old and allow course mentors view their students progress, by simply inputting the students email address into the login page. 
+
+### Framework
+[Bootstrap](https://getbootstrap.com/)
+- Bootstrap useage largely focuses on the responsiveness aspect of the appliaction
+
+[Materialize](https://materializecss.com/)
+- Materialize used for the general forms due to the clean and simple appearence. 
+
+[JQuery v3.5.1](https://jquery.com/)
+- In an bid to keep the JavaScript usage minimal, I chose to use jQuery as foundation to my scripts framework.
+
+[Flask](https://flask.palletsprojects.com/en/1.1.x/)
+- Flask is a microframework that I've used to render the back-end Python with the front-end.
 
 
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
