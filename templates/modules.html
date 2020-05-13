@@ -33,25 +33,12 @@
         <p>{{topic.topic}}</p>
       </div>
       <div class="col-4">
-      {% if topic.is_complete == "false" %}
-       <form action="{{ url_for('iscomplete', topics_id=topic._id) }}">
       <p>
       <label>
-        <input type="checkbox" class="filled-in" />
+        <input type="checkbox" onclick="toggle_complete('{{topic._id}}')" class="filled-in" {% if topic.complete %} checked{% endif %}/>
         <span></span>
       </label>
     </p>
-       </form>
-       {% else %}
-        <form action="#">
-        <p>
-      <label>
-        <input type="checkbox" class="filled-in" checked="checked" />
-        <span>Filled in</span>
-      </label>
-    </p>
-       </form>
-{% endif %}
       </div>
       <div class="col-4">
         <a href="{{url_for('delete', topics_id=topic._id)}}"><i class="small material-icons accordionicon">delete</i></a>
