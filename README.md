@@ -71,7 +71,8 @@ Keeping in mind current situation around the world, this application is aimed at
 - Flask is a microframework that I've used to render the back-end Python with the front-end.
 
 ### Colour Scheme
-The Study-Pal application 
+The Study-Pal application makes use of five core colours.
+The primary colour being both #25443 and #FBFCBF
 [Colour Scheme](https://github.com/ClaireLally8/StudyPal/blob/master/static/imgs/colourscheme.png)
 
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
