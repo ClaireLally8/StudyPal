@@ -5,7 +5,6 @@ The Study-Pal application was created to assist students in the organisation of 
 The target audience, being studets, are able to create subjects and topics within one page and track their study by ticking off each subject as they complete. In another page, students are able to create, update and delete notes. 
 
 ## Table of Contents
-## Table of Contents
 1. [**UX**](#ux)
     - [**User Stories**](#user-stories)
     - [**Design**](#design)
@@ -52,9 +51,12 @@ The target audience, being studets, are able to create subjects and topics withi
 - As an instructor, I would like to be able to view a students account using their @edu email address to view their study progress.
 
 ### Design
-The overall design idea behind this was accessible.  I wanted to make Study-Pal an accessible planner, for both young students and old and allow course mentors view their students progress, by simply inputting the students email address into the login page. 
+The overall design idea behind this was to keep the application as accessible for all users.
+
+Keeping in mind current situation around the world, this application is aimed at students and instructors.  Where instructors can review a students progress within their courseload, and students can track their own progress, store and review notes also. 
 
 ### Framework
+
 [Bootstrap](https://getbootstrap.com/)
 - Bootstrap useage largely focuses on the responsiveness aspect of the appliaction
 
@@ -63,10 +65,14 @@ The overall design idea behind this was accessible.  I wanted to make Study-Pal 
 
 [JQuery v3.5.1](https://jquery.com/)
 - In an bid to keep the JavaScript usage minimal, I chose to use jQuery as foundation to my scripts framework.
+- JQuery(AJAX) was also used to prevent reloading of the page when a topic was marked off as complete. 
 
 [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 - Flask is a microframework that I've used to render the back-end Python with the front-end.
 
+### Colour Scheme
+The Study-Pal application 
+[Colour Scheme](https://github.com/ClaireLally8/StudyPal/blob/master/static/imgs/colourscheme.png)
 
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
