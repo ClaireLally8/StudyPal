@@ -9,8 +9,8 @@ CDA21F
 
 CSS is organised by pages */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hind&family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Roboto&display=swap');
+
 html {
   min-height: 100vh;
 }
@@ -21,14 +21,14 @@ body {
   background-color: #FBFCFB;
 }
 .subheading {
-    font-family:Montserrat;
+    font-family:Roboto;
     font-size:3rem;
     color: #253443;
     text-transform:uppercase;
     padding-bottom:2rem;
 }
 .subline {
-    font-family: hind;
+    font-family: lato;
     letter-spacing:1px;
     color:#253443;
     text-align:center;
