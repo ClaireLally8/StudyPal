@@ -10,6 +10,7 @@ CDA21F
 CSS is organised by pages */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@0;1&family=Montserrat:wght@100;200;300;500;700&family=Roboto:wght@100;300&display=swap');
 
 html {
   min-height: 100vh;
@@ -133,7 +134,16 @@ button.accordion.is-open {
   -ms-transition: background-color 300ms linear, color 1s linear;
   transition: background-color 300ms linear, color 1s linear;
 }
-
+.accordionhead {
+    font-family: Montserrat;
+    font-weight:300;
+    letter-spacing: 0.2px;
+}
+.subjectheader {
+    font-family: "Roboto";
+    font-weight:300;
+    letter-spacing:0.2px;
+}
 .accordion-content {
   background-color: #FBFCFB;
   padding: 0 1.2rem;
@@ -158,8 +168,12 @@ button.accordion.is-open {
     -ms-transition:     color 1s;
     -o-transition:      color 1s;
 }
-.accordionpadding {
+.accordioninside {
     padding:0.2rem;
+    font-family: "Montserrat";
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    line-height:16px;
 }
 .floating {
      background-color:#CDA21F;
@@ -248,7 +262,22 @@ button.accordion.is-open {
 }
 
 /* NOTES PAGE */
-
+.card-content {
+    font-family: "Roboto";
+    font-weight:300;
+    font-size:1.2rem;
+    letter-spacing:0.2px;
+    line-height:12px;
+}
+.inside{
+    font-family: "Montserrat";
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    line-height:16px;
+    padding-top:1.2rem;
+    padding-left:0.4rem;
+    padding-right:0.4rem;
+}
 .blend {
     background-color: #253443;
     color: #F1F2EF;
@@ -273,3 +302,5 @@ button.accordion.is-open {
 .notetitle {
     padding: 4em;
 }
+
+

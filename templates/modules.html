@@ -8,10 +8,10 @@
 </div>
 <div class="container-fluid accordioncontainer">
   {% for subject in subjects %}
-  <button class="accordion">{{subject.subject}}</button>
+  <button class="accordion accordionhead">{{subject.subject}}</button>
   <div class="accordion-content">
     <br>
-    <div class="row">
+    <div class="row subjectheader">
       <div class="col-4">
         Topic Name
       </div>
@@ -28,7 +28,7 @@
     <br>
     {% for topic in topics %}
     {% if subject.subject == topic.subject %}
-    <div class="row accordionpadding {% if topic.complete %}isComplete{% endif %}" id="isComplete{{topic._id}}">
+    <div class="row accordioninside {% if topic.complete %}isComplete{% endif %}" id="isComplete{{topic._id}}">
       <div class="col-4">
         <p>{{topic.topic}}</p>
       </div>
