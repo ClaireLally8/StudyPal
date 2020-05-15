@@ -9,7 +9,7 @@ CDA21F
 
 CSS is laid out by page. */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@0;1&family=Montserrat:wght@100;200;300;500;700&family=Roboto:wght@100;300&display=swap');
 html {
     scroll-behavior: smooth;
 }
@@ -35,19 +35,29 @@ body {
 .navlink{
     color:#37475F!important;
 }
+
+/* FOOTER STYLING */
+.page-footer {
+    font-family: montserrat;
+    font-weight:200;
+    letter-spacing:0.1rem;
+
+}
+
 /* HOME PAGE STYLING */ 
 .homehead {
-    font-family: "Montserrat";
-    color: #FBFCFB;
+    text-align:center;
+    font-family: "Karla";
     font-size:5rem;
     letter-spacing:0.2rem;
-    text-transform: uppercase;
+    text-transform:uppercase;
 }
 .homebase {
-    font-family: "lato";
+    font-family: "Roboto";
+    font-weight:300;
     font-size:2rem;
-    padding-top:2rem;
     letter-spacing:0.2rem;
+    text-align: center;
 }
 .titles {
     padding-bottom:4rem;
@@ -56,38 +66,60 @@ body {
 .subtext {
     padding-top:3rem;
     font-family:"roboto";
+    font-weight:300;
     font-size:1.5rem;
-    padding-left:1.4rem;
     padding-right:0.8rem;
     letter-spacing:2px;
+    text-align:center;
+    padding-bottom:3rem;
 }
 .code {
     color:#37475F;
     text-align:center;
-    padding-top:4rem;
     font-size:8rem;
 }
 .byline {
-    color:#37475F;
-    text-align:center;
-    font-family: Montserrat;
-    padding-top:2.1rem;
-    text-transform: uppercase;
+    font-weight:300;
+    line-height: 36px;
+    letter-spacing: -0.25px;
+    font-size:2.8rem;
+    color: #253443;
+    font-family: "Montserrat";
+    text-align: center;
 }
 .subline
 {
     color:#37475F;
-    font-family:Montserrat;
-    font-size:1rem;
+    font-family:"Montserrat";
+    font-size:1.2rem;
     text-align:center;
-    padding-top:0.8rem;
 }
 .howitworks {
     padding-top:8rem;
     padding-bottom:9rem;
+    padding-left:3rem;
+    padding-right:3rem;
+}
+.icons {
+    color: #cda21f;
+    text-align: left; 
+}
+.iconhead {
+    font-size:1.25em;
+    line-height: 2rem;
+    color:#253443;
+    font-family: "Montserrat";
+}
+.icontext {
+    letter-spacing: 0.12px;
+    font-size: 1rem;
+    line-height: 1.75;
+    color:#253443;
+    font-family: "Montserrat";
+
 }
 .homepage {
-    background-color: #37475F;
+    background-color:#253443;
     padding-bottom:5rem;
 }
 .page-footer {
