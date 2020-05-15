@@ -1,10 +1,12 @@
 {% extends "index.html" %}
 {% block body %}
-<div class="container-fluid background">
+<div class="row details">
+<div class="col-sm-12 col-md-6 col-md-6">
   <img src="{{ url_for('static', filename='imgs/register.svg') }}" class="img-fluid regimg">
 </div>
-<div class="container overlay">
+<div class="col-sm-12 col-md-6 col-md-6">
 <h4 class="reghead">Register for Study-Pal</h4>
+<h3 class="regsub">Change the way you study today!</h3>
   <div class="details">
     <form method=POST action="{{ url_for('register') }}">
       <div class="col-lg-6 offset-lg-3 col-sm-12">

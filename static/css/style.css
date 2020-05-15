@@ -166,24 +166,37 @@ body {
 .reghead {
     color:#253443;
     text-align:center;
-    padding-bottom:3rem;
+    padding-bottom:1.2rem;
+    font-family: "Roboto";
+    font-weight:300;
+    letter-spacing:0.4px;
+    line-height:32px;
+    text-transform:uppercase;
+}
+.regsub {
+    color:#253443;
+    font-family: "Montserrat";
+    font-weight:200;
+    font-size:1.4em;
+    text-align:center;
+    letter-spacing:0.4px;
+    line-height:32px;
+    padding-bottom:1.2rem;
+}
+.redirect {
+    font-family: Montserrat;
+    font-weight:100;
+    letter-spacing:0.4px;
+    line-height:32px;
 }
 .background {
     background-color:#37475F;
     position: relative;
 }
-.overlay {
-    position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color:#FBFCFB;
-  padding: 7rem 1rem 8rem 1rem;
-  box-shadow: 10px 10px 10px black;
-  opacity:0.9;
-}
-.regimg {
-    padding-top:2rem;
+.details {
+    padding-top:8rem;
+    padding-bottom:4rem;
+
 }
 
 /* MEDIA QUERY */
