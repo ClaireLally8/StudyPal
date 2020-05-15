@@ -5,7 +5,7 @@ The Study-Pal application was created to assist students in the organisation of 
 The target audience, being studets, are able to create subjects and topics within one page and track their study by ticking off each subject as they complete. In another page, students are able to create, update and delete notes. 
 
 ## Table of Contents
-1. [**UX**](#ux)
+1. [**UX**](#user-experience)
     - [**User Stories**](#user-stories)
     - [**Design**](#design)
         - [**Framework**](#framework)
@@ -36,6 +36,7 @@ The target audience, being studets, are able to create subjects and topics withi
     - [**Media**](#media)
     - [**Code**](#code)
     - [**Acknowledgements**](#acknowledgements)
+
  ## **User Experience**
 ---
 ### **User stories**
@@ -52,6 +53,8 @@ The target audience, being studets, are able to create subjects and topics withi
 
 ### Design
 The overall design idea behind this was to keep the application as accessible for all users.
+
+Features on the homepage was adapted from [inVision](https://www.invisionapp.com/) webpage with the content changed to suit the Study-Pal functionality. 
 
 Keeping in mind current situation around the world, this application is aimed at students and instructors.  Where instructors can review a students progress within their courseload, and students can track their own progress, store and review notes also. 
 
@@ -86,10 +89,20 @@ The primary colour being both #25443 and #FBFCBF
     The reason for this was solely due to creating a more beneficial User Experience. 
 ### Typography
 
-Study-Pal uses two main fonts
+Study-Pal uses three core fonts
 
-    - Montserrat
-    - Roboto
-Both fonts were chosen for the sleek look and the ease as which they can be read by all visitors to the site. 
+- `Montserrat`
+
+    `Montserrat` is the primary font in the site.  Used on all the navigation links.  To make the content of the site more visually appealing and to highlight the hierarchy in the pages, I used four different weights of the font.   `500, 300, 200, 100.`
+
+- `Karla`
+    
+    `Karla` was uesd for the header on the landing page.   As a slighly heavier weighted font than the other two fonts used, it draws the eye in to the main title of the application and emphasises this. 
+
+- `Roboto`
+
+    Roboto font was used variously throughout the site, used in the regular (300) weighting.  Roboto was chosen for the areas of the application that would have a lower level of importance than those using `Montserrat` and `Karla`.
+
+
 
 
