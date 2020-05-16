@@ -51,14 +51,14 @@ The target audience, being studets, are able to create subjects and topics withi
 
 - As an instructor, I would like to be able to view a students account using their @edu email address to view their study progress.
 
-### Design
+### **Design**
 The overall design idea behind this was to keep the application as accessible for all users.
 
 Features on the homepage was adapted from [inVision](https://www.invisionapp.com/) webpage with the content changed to suit the Study-Pal functionality. 
 
 Keeping in mind current situation around the world, this application is aimed at students and instructors.  Where instructors can review a students progress within their courseload, and students can track their own progress, store and review notes also. 
 
-### Framework
+### **Framework**
 
 [Bootstrap](https://getbootstrap.com/)
 - Bootstrap useage largely focuses on the responsiveness aspect of the appliaction
@@ -73,21 +73,22 @@ Keeping in mind current situation around the world, this application is aimed at
 [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 - Flask is a microframework that I've used to render the back-end Python with the front-end.
 
-### Colour Scheme
+### **Colour Scheme**
 
 The Study-Pal application makes use of five core colours.
 The primary colour being both #25443 and #FBFCBF
 
 <img src="/static/imgs/colourscheme.png">
 
-### Icons
+### **Icons**
 
 - [Materialize Icons](https://materializecss.com/icons.html)
     - I replaced a lot of text areas with icons, specifically for the create, edit and delete functionality.  Each of these aspects makes use of the materialize icons, creating a smooth overall experience for the users. 
 - [Font Awesome 5.8.1](https://fontawesome.com/)
     - Although Materialize Icons have nearly 1,000 free-to-use icons, I also made use of fontawesome icons on some aspects for the site. 
     The reason for this was solely due to creating a more beneficial User Experience. 
-### Typography
+
+### **Typography**
 
 Study-Pal uses three core fonts
 
@@ -104,5 +105,27 @@ Study-Pal uses three core fonts
     Roboto font was used variously throughout the site, used in the regular (300) weighting.  Roboto was chosen for the areas of the application that would have a lower level of importance than those using `Montserrat` and `Karla`.
 
 
+### **Wireframes**
+
+During the planning stages of the project, wireframes were created for desktop, tablet and mobile viewports.
+
+- desktop
+    - [Landing Page](wireframes/Desktop/Landing-Page.png)
+    - [Register](wireframes/Desktop/register.png)
+    - [Login](wireframes/Desktop/login.png)
+    - [Subjects](wireframes/Desktop/subjects.png)
+    - [Notes](wireframes/Desktop/notes.png)
+- Tablet
+    - [Landing Page](wireframes/Tablet/Landing-Page.png)
+    - [Register](wireframes/Tablet/Register.png)
+    - [Login](wireframes/Tablet/Login.png)
+    - [Subjects](wireframes/Tablet/Subjects.png)
+    - [Notes](wireframes/Tablet/Notes.png)
+- Mobile
+    - [Landing Page](wireframes/Mobile/Landing-Page.png)
+    - [Register](wireframes/Mobile/Register.png)
+    - [Login](wireframes/Mobile/Login.png)
+    - [Subjects](wireframes/Mobile/Subjects.png)
+    - [Notes](wireframes/Mobile/Notes.png)
 
 
