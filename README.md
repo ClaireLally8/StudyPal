@@ -23,6 +23,7 @@ The target audience, being studets, are able to create subjects and topics withi
 3. [**Technologies Used**](#technologies-used)
     - [**Front-End Technologies**](#front-end-technologies)
     - [**Back-End Technologies**](#back-end-technologies)
+    - [**Database Schema**](#database-schema)
 
 4. [**Testing**](#testing)
 
@@ -250,6 +251,45 @@ There were several features planned for the future implentation of this project.
 - Pymongo - Used to connect the python with the database.
 - MongoDB Atlas - Used to store the database. 
 
----
+#### Database Schema
+
+- The application uses MongoDB for data storage.  MongoDB was chosen as the database to use due to the unstructured format of the data that will be stored within it. 
+
+The data stored in the database are the following:
+- Object ID
+- String
+- Boolean
+
+There are four core collections within the Database: 
+
+Users
+| Title | Key in db | form validation type | Data type |
+--- | --- | --- | --- 
+Account ID | _id | None | ObjectId 
+Email Address | email | email | string
+
+Subjects
+| Title | Key in db | form validation type | Data type |
+--- | --- | --- | --- 
+Account ID | _id | None | ObjectId 
+Email Address | email | email | string
+Subject | subject | text | string
+
+Topics
+| Title | Key in db | form validation type | Data type |
+--- | --- | --- | --- 
+Account ID | _id | None | ObjectId 
+Email Address | email | email | string
+Subject | subject | dropdown menu | string
+Topic | topic | text | string
+Complete| complete | checkbox | boolean (default to false)
+
+Notes
+| Title | Key in db | form validation type | Data type |
+--- | --- | --- | --- 
+Account ID | _id | None | ObjectId 
+Email Address | email | email | string
+Subject | subject | dropdown menu | string
+Notes | note | text | string
 
 ---
