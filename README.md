@@ -14,6 +14,8 @@ The target audience, being studets, are able to create subjects and topics withi
         - [**Typography**](#typography)
     - [**Wireframes**](#wireframes)
 
+4. [**Information Architecture**](#information-architecture)
+
 2. [**Features**](#features)
     - [**Existing Features**](#existing-features)
     - [**Features Left to Implement**](#features-left-to-implement)
@@ -136,7 +138,14 @@ During the planning stages of the project, wireframes were created for desktop, 
     - [Login](wireframes/Mobile/Login.png)
     - [Subjects](wireframes/Mobile/Subjects.png)
     - [Notes](wireframes/Mobile/Notes.png)
+
 ---
+### Information Architecture
+---
+In order to sucessfully depict a users journey through the application, I created a Customer Journey Map.  Documenting each aspect of the applications CRUD functionality, from start to finish.
+
+[**Customer Journey Map**](wireframes/charts/CustJourneyMap.png)
+
 ## **Features**
 ---
 ### Existing Features
@@ -240,3 +249,7 @@ There were several features planned for the future implentation of this project.
 - Python - The back-end programming language.
 - Pymongo - Used to connect the python with the database.
 - MongoDB Atlas - Used to store the database. 
+
+---
+
+---
