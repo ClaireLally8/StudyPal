@@ -253,7 +253,7 @@ There were several features planned for the future implentation of this project.
 
 #### Database Schema
 
-- The application uses MongoDB for data storage.  MongoDB was chosen as the database to use due to the unstructured format of the data that will be stored within it. 
+- The application uses `MongoDB` for data storage.  MongoDB was chosen as the database to use due to the unstructured format of the data that will be stored within it. 
 
 The data stored in the database are the following:
 - Object ID
@@ -262,20 +262,23 @@ The data stored in the database are the following:
 
 There are four core collections within the Database: 
 
-Users
+**Users**
+
 | Title | Key in db | form validation type | Data type |
 --- | --- | --- | --- 
 Account ID | _id | None | ObjectId 
 Email Address | email | email | string
 
-Subjects
+**Subjects**
+
 | Title | Key in db | form validation type | Data type |
 --- | --- | --- | --- 
 Account ID | _id | None | ObjectId 
 Email Address | email | email | string
 Subject | subject | text | string
 
-Topics
+**Topics**
+
 | Title | Key in db | form validation type | Data type |
 --- | --- | --- | --- 
 Account ID | _id | None | ObjectId 
@@ -284,7 +287,8 @@ Subject | subject | dropdown menu | string
 Topic | topic | text | string
 Complete| complete | checkbox | boolean (default to false)
 
-Notes
+**Notes**
+
 | Title | Key in db | form validation type | Data type |
 --- | --- | --- | --- 
 Account ID | _id | None | ObjectId 
@@ -292,4 +296,62 @@ Email Address | email | email | string
 Subject | subject | dropdown menu | string
 Notes | note | text | string
 
+The `email address` is added to each of the collections in order link all the the collections together. 
+
 ---
+### Testing
+---
+All information on testing can be found in [Testing.md](testing.md)
+
+---
+## Deployment
+---
+### Local Deployment
+
+**To run this project locally**
+
+In order to run this project locally, you will need to install the following: 
+- An IDE, such as [VS Code](https://code.visualstudio.com/)
+- [PIP](https://pip.pypa.io/en/stable/installing/) to install the app requirements.
+- [Python3](https://www.python.org/downloads/) to run the application
+- [GIT](https://www.atlassian.com/git/tutorials/install-git) for version control
+- [MongoDB](https://www.mongodb.com/) to develop the database.
+
+
+Once this is done, you will need need to download the .ZIP file of the repository, unzip this file and then in the CLI with GIT installed, enter the following command: 
+   
+    https://github.com/ClaireLally8/StudyPal.git
+
+- Navigate to the to path using the `cd` command. 
+- Create a `.env` file with your credentials. Be sure to include your `MONGO_URI` and `SECRET_KEY` values.
+- Install all requirements from the requirements.txt file using the following command:
+    
+        sudo -H pip3 -r requirements.txt
+- Sign up for a free account on MongoDB and create a new Database called StudyPlanner. The names of the databases collections can be found in the [database schema](#database-schema) section. 
+- You should then be able to launch your app using the following command in your terminal:
+
+        python app.py
+
+### Remote Deployment
+
+- Create a `requirements.txt` file using the terminal command `pip freeze > requirements.txt`.
+- Create a Procfile with the terminal command `echo web: python app.py > Procfile`.
+- `git add` and `git commit` the new requirements and Procfile and then `git push` the project to GitHub.
+- Head over to [Heroku](https://dashboard.heroku.com/login)
+- Click the "new" button, give the project a name & set the region to Europe. 
+- From the heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub.
+- Confirm the linking of the heroku app to the correct GitHub repository.
+- In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
+- Set the following config vars:
+
+| KEY | VALUE | 
+--- | --- | --- | --- 
+DEBUG| FALSE | 
+IP | 0.0.0.0|
+PORT | 5000|
+MONGODBNAME | <database_name>
+MONGO_URI| mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority 
+SECRET KEY | <secret_key>
+
+- In the heroku dashboard, click "Deploy".
+- Your application should now be deployed.
