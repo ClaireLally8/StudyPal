@@ -23,9 +23,6 @@ The target audience, being studets, are able to create subjects and topics withi
     - [**Back-End Technologies**](#back-end-technologies)
 
 4. [**Testing**](#testing)
-    - [**Validators**](#validators)
-    - [**Compatibility**](#compatibility)
-    - [**Known Issues**](#known-issues)
 
 5. [**Deployment**](#deployment)
     - [**Local Deployment**](#local-deployment)
@@ -216,3 +213,30 @@ There were several features planned for the future implentation of this project.
 (6) Ability to predict a pace
 - When a user enters a start & end date for their study-pal, a user can then track their pace and what days they should be completing topcis and how many days they should be spending on each topic. 
 
+---
+### Technologies Used 
+
+---
+- Gitpod - Used as the IDE for this application.
+- Github used for the remote storage of the code online.
+- inVision Studio - used for creating the wireframes of the project.
+- Adobe Illustator - Used to edit the images to meet the colour scheme of the application.
+
+#### Font-End Technologies
+
+- HTML - Used to create the structure of the application. 
+- CSS - Used as the base for styling. 
+- Javascript - Used to create interactivity within the project. 
+- JQuery - Used for some of the main javascript functionality.
+- AJAX - Used to prevent the page reloading upon writing to the database.
+- Materialize - Used in conjunction with Bootstrap as the design framework. 
+- Bootstrap - Used in conjunction with Bootstrap as the design framework. 
+
+#### Back-End Technologies
+
+- Flask - Used as the microframework.
+- Jinja - Used for templating with Flask.
+- Heroku - Used to host the application
+- Python - The back-end programming language.
+- Pymongo - Used to connect the python with the database.
+- MongoDB Atlas - Used to store the database. 
