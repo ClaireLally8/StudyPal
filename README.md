@@ -69,8 +69,8 @@ The Study-Pal application is split into two parts.
 - These pages consist of two sections.
     - Sidenavbar - both appealing to view.  On smaller screens, the navbar is a fullscren function and is triggers by a burger menu on the right corner of the page. 
     - Accordion that stores topics in the subjects pages or notes in the notes page.  After testing with a card functionality for these areas, there was greater postive feedback on an accordion feature for these sections. 
-    
-### **Framework**
+
+### **Frameworks**
 
 [Bootstrap](https://getbootstrap.com/)
 - Bootstrap useage largely focuses on the responsiveness aspect of the appliaction
@@ -139,5 +139,80 @@ During the planning stages of the project, wireframes were created for desktop, 
     - [Login](wireframes/Mobile/Login.png)
     - [Subjects](wireframes/Mobile/Subjects.png)
     - [Notes](wireframes/Mobile/Notes.png)
+---
+## **Features**
+---
+### Existing Features
 
+### Features on multiple Pages
+
+
+ - #### Navbar:
+    - Study-Pal utilises two separate navbars, python checks if a user is logged in or not by using the `if email in Session` code and passes it to Jinja to determine which navbar to display.
+        - If not in Session - the homepage, register page and login page will be displayed.  With a responsive navbar that contains links to the Home, Register and Login pages.
+        - If in Session - the Subjects & Notes page is displayed.  A responsive side navbar that contains links to the two pages and a logout feature is displayed.
+            - On Mobile, this page is hidden behind a burger menu, and when clicked is displayed on the full mobile page. 
+
+- #### Footer 
+    - A footer is displayed on the Home, Register & Login pages.  
+        - The footer contains two main link areas.  1) (fictional) Contact Details for Study-Pal creators. 2) Navigation links to jump to the top of the page, redirec to the login or register pages.
+
+---
+
+### Features on individual pages   
+
+#### Home Page
+
+- Hero Image
+    - The hero image is of a laptop, to signify the digital transformation of everything.  Accompanied by text on the left hand side, which is a brief low-down on the application and what it does.
+
+- How it Works Section
+    - Adapted from inVision's webpage - it utilises both text and icons to display the reasons for using the application and a brief description on how it works. 
+
+#### Register & Login Pages
+- These pages both follow the same structure: 
+    - Main Image to the left of the page.
+    - Form with email input & submit button on the right.
+
+From testing, it was concluded that users eyes were drawn to the right hand side portion of the page, so the decision was made to put the form on the right hand side. 
+There is also a link on the page to the opposed page (Register page contains a login link & vice versa)
+
+#### Subjects Page
+
+In the centre of the page, an accordion is displayed. 
+- Upon loading, the accordion is closed & the subject name is displayed.
+    - When clicked, the accordion opens and the topics are visible, where users can check off what they have completed, add and delete topics.  The process for adding a topic is similar to adding a subject. 
+
+- A button on the bottom right of the page, when clicked, a modal for creating a new subject appears.  
+This modal requests for users to input their subject name and add this subject.
+
+#### Notes Page
+Similar to the Subjects page, an accordion is found in the centre.
+
+ - Notes are stored in this accordion.  A user clicks on the accordion and it expands.  Within this, there's an edit & delete button. 
+ - Clicking the edit button, will relocate to another page where the user can update the note by changing the name and the notes content.
+ - Clicking the delete button will reload the page and the note will be removed from the database it's stored in. 
+
+---
+## Features left to implement
+---
+There were several features planned for the future implentation of this project.
+
+(1) Pagination
+ - This was attempted several times throughout the creation of the project, however upon reviewing it was outside of my overall ability and the general scope of the application.
+
+(2) Date Tracking
+- This is a feature, again in the next implemetnation of the project aht I will be adding, where a user is able to record the date they would like to study the toic & the date they completed the topic also. 
+
+(3) Classrooms 
+- Where a user can join a virtual 'classroom' that they can join alongside their classmates.  Share notes and assist each other in the study process. 
+
+(4) Progress Tracking 
+- Where a student can compare where they are against other students in their classroom and review whether they are on track, ahead or behind the average of the classroom.
+
+(5) Sharing notes with other users
+- Upon entering a students email address, students are able to view others public notes and add them to their own notes section.  This feature will also involve the creation of private & public notes where users can share their notes with others, or choose not to share notes. 
+
+(6) Ability to predict a pace
+- When a user enters a start & end date for their study-pal, a user can then track their pace and what days they should be completing topcis and how many days they should be spending on each topic. 
 
