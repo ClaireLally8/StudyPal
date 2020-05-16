@@ -58,6 +58,18 @@ Features on the homepage was adapted from [inVision](https://www.invisionapp.com
 
 Keeping in mind current situation around the world, this application is aimed at students and instructors.  Where instructors can review a students progress within their courseload, and students can track their own progress, store and review notes also. 
 
+The Study-Pal application is split into two parts. 
+1) Home/Login/Register
+- These sections consist of a navbr, main action section and a footer. 
+    - Navbar - a responsive navbar with links to the `Home`, `Login` and `Register` pages.  
+    - Main Action Section - this is where the information for the user lies, be it the information of the site itself, how the user logs in or registers an account.
+    - Footer - A responsive footer, pinned to the bottom of the page, with Contact Details, links for the login, register & home page also. 
+
+2) Subjects  & Notes pages.
+- These pages consist of two sections.
+    - Sidenavbar - both appealing to view.  On smaller screens, the navbar is a fullscren function and is triggers by a burger menu on the right corner of the page. 
+    - Accordion that stores topics in the subjects pages or notes in the notes page.  After testing with a card functionality for these areas, there was greater postive feedback on an accordion feature for these sections. 
+    
 ### **Framework**
 
 [Bootstrap](https://getbootstrap.com/)
@@ -109,7 +121,7 @@ Study-Pal uses three core fonts
 
 During the planning stages of the project, wireframes were created for desktop, tablet and mobile viewports.
 
-- desktop
+- Desktop
     - [Landing Page](wireframes/Desktop/Landing-Page.png)
     - [Register](wireframes/Desktop/register.png)
     - [Login](wireframes/Desktop/login.png)
