@@ -1,4 +1,4 @@
-# Study Pal - Your Personalised Study Tracker 
+# [Study Pal - Your Personalised Study Tracker](https://study-pal.herokuapp.com/)
 
 Study Pal is a fullstack application targeting students studying in a class based or online set-up.  
 The Study-Pal application was created to assist students in the organisation of subjects and notes, so each student can keep track of their subjects and topics within these subjects. 
@@ -35,7 +35,6 @@ The target audience, being studets, are able to create subjects and topics withi
     - [**Content**](#content)
     - [**Media**](#media)
     - [**Code**](#code)
-    - [**Acknowledgements**](#acknowledgements)
 
  ## **User Experience**
 ---
@@ -355,3 +354,19 @@ SECRET KEY | <secret_key>
 
 - In the heroku dashboard, click "Deploy".
 - Your application should now be deployed.
+
+### Content
+
+All content for the Study-Pal application was written by me. 
+---
+
+#### Media
+
+- Images were sources from [unDraw](https://undraw.co/), a site containing open soruce images.
+- Layout from the home-page was adapted from [inVision](https://www.invisionapp.com/)
+
+#### Code
+
+- I followed [this tutorial](https://www.youtube.com/watch?v=vVx1737auSE) on how to create the login functionality using Flask & Pymongo. 
+- Code for the accordion was adapted from [WebDevTrick](https://webdevtrick.com/html-css-javascript-accordion-source-code/) & is credited in the JS code also.
+- The Sidenav bar was adapted from two videos - [Animated Side Nav](https://www.youtube.com/watch?v=acuYmzY6XOg) and another youtube video which has since been deleted. 
