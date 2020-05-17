@@ -210,10 +210,6 @@ button.accordion.is-open {
     background-color: #FBFCFB;
     color:#253443;
 }
-.modal-footer {
-    background-color: #B3C1CE;
-    color:#253443;
-}
 .btn {
     background-color: #253443;
     color:#FBFCFB;
@@ -224,6 +220,12 @@ button.accordion.is-open {
 }
 .large {
     height:6rem;
+}
+.heading {
+    padding-top:4rem!important;
+}
+.smallheding {
+    padding-top:2rem!important;
 }
 @media only screen and (max-width: 768px) {
 
@@ -300,5 +302,17 @@ button.accordion.is-open {
 .notetitle {
     padding: 4em;
 }
-
+.editnote {
+    color:#253443;
+    font-family: "Lato";
+    font-size:1.2rem;  
+}
+.subjectname {
+    font-family: "Montserrat";
+    color:#253443;
+    font-size:1.5rem;
+    padding-top:2em;
+    text-align:center;
+    font-weight:500;
+}
 

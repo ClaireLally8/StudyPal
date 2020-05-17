@@ -146,6 +146,7 @@ def update_notes(note_id):
     notes.update({'_id': ObjectId(note_id)},
                  {
         'title': request.form.get('title'),
+        'subject':request.form.get('subject'),
         'note': request.form.get('note'),
         'email': session['email'],
     })

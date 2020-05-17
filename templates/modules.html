@@ -60,16 +60,15 @@
 <!-- Modal Structure for adding a  subjects -->
 <div id="modal1" class="modal subjectmodal">
   <div class="modal-content">
-    <h4>Add A Subject</h4>
+    <h4 class="heading">Add A Subject</h4>
     <form action="{{ url_for('add_subject') }}" method="POST">
       <div class="input-field">
         <br><br>
-        <label>Subject Name</label>
+        <label></label>
         <input id="subjects" name="subjects" type="text" required>
+        <span class="desc">Subject Name</span>
       </div>
-      <div class="modal-footer">
         <button class="button waves-effect btn" type="submit">Add Subject</button>
-      </div>
     </form>
   </div>
 </div>
@@ -77,7 +76,7 @@
 <!-- Modal Structure for adding a new topic -->
 <div id="modal2" class="modal topicmodal">
   <div class="modal-content">
-    <h4>Add A Topic</h4>
+    <h4 class="heading">Add A Topic</h4>
     <form action="{{ url_for('add_topic') }}" method="POST">
       <br>
       <select class="dropdown" id="subject" name="subject" required>
@@ -90,12 +89,11 @@
       <br><br>
       <div class="input-field">
         <br><br>
-        <label>Topic Name</label>
+        <label></label>
         <input id="topic_name" name="topic" type="text" required>
-        <div class="modal-footer">
+         <span class="desc">Topic Name</span>
+         </div>
           <button class="button waves-effect btn" type="submit">Add Topic</button>
-        </div>
-      </div>
     </form>
   </div>
 </div>

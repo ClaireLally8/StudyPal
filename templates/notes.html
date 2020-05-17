@@ -33,7 +33,7 @@
 
 <div id="modal3" class="modal notesmodal">
   <div class="modal-content">
-    <h4>Add Notes</h4>
+    <h4 class="smallheading">Add Notes</h4>
     <form action="{{ url_for('add_notes') }}" method="POST">
       <br>
       <select id="subject" name="subject" required>
@@ -45,16 +45,16 @@
       </select>
       <br><br>
       <div class="input-field">
-        <label for="title">Notes Name</label>
+        <label></label>
         <input id="title" name="title" type="text" required>
+         <span class="desc">Note Name</span>
       </div>
       <div class="input-field">
-        <label>Notes</label>
+        <label></label>
+         <span class="desc left">Note Description</span>
         <textarea name="note" id="note" class="large" required></textarea>
       </div>
-      <div class="modal-footer">
         <button class="button waves-effect btn" type="submit">Add Note</button>
-      </div>
     </form>
   </div>
 </div>
