@@ -102,3 +102,26 @@ There is one key bug that due to both time and skill restraints I found I am una
 
 No other known bugs were presented upon review of the application.
 
+---
+### UX Testing
+---
+
+Two main tests were conducted to ensure a positive User Experience : 
+
+1) User Testing
+2) Competitive Benchmarking
+
+
+#### User Tests
+
+A single usaibility test was undertaken to ensure the application was easy-to-use and accessible for all student ages and backgrounds.
+- Test 1
+    - A  student, studying for your university exams.  Create an account using the email address hello@test.com. 
+    - Create two subjects relating to a module on your coursework, called "Calculus" and "Statistics" 
+    - Make three topics, differentiation, integration under the calculus subject, and standard deviation under the statistics subject. 
+    - Create a note, under the subject, Differentiation, called definition with the definition "In Calculus, derivative is the measure of how a function changes its value as the input changes"
+    - Create another note, under Statistics, again, called definition,  with the note "In statistics, the standard deviation is a measure of the amount of variation or dispersion of a set of values." 
+    - Edit the differentiation note, and change the name to "Introduction to derivatives" and add the line "the derivative of y (with respect to x) is written dy/dx"
+    - Now, go to the topic and check off the topic, differentiation. 
+    - Your lecturer has emailed, standard deviation is no longer on the exam, so you must delete everything from the application about standard deviation, note and topic. 
+    - Logout of your account. 
