@@ -46,6 +46,7 @@ The target audience, being studets, are able to create subjects and topics withi
 <br>
 <br>
  ## **User Experience**
+
 ---
 
 ### **User stories**
@@ -160,9 +161,9 @@ In order to sucessfully depict a users journey through the application, I create
 
 <br>
 ---
+
 ## **Features**
 
----
 ### Existing Features
 
 ### Features on multiple Pages
@@ -358,8 +359,8 @@ Once this is done, you will need need to download the .ZIP file of the repositor
 - In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
 - Set the following config vars:
 
-| KEY | VALUE | 
---- | --- | --- | --- 
+| KEY | VALUE |
+--- | --- |
 DEBUG| FALSE | 
 IP | 0.0.0.0|
 PORT | 5000|
