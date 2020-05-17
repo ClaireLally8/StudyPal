@@ -14,6 +14,7 @@ You can view the deployed application [here](http://study-pal.herokuapp.com/base
 
 2. [**Functional Testing**](#functional-testing)
     - [**User Testing**](#user-tests)
+    - [**Manual Testing**](#manual-testing)
 
 ---
 ### Code Testing
@@ -124,6 +125,10 @@ A single usaibility test was undertaken to ensure the application was easy-to-us
     - Your lecturer has emailed, standard deviation is no longer on the exam, so you must delete everything from the application about standard deviation, note and topic. 
     - Logout of your account. 
 
+**Feedback From User Test**
+There was some feedback given from the user test.
+- Altering the colour of some text to make it stand out more to the user
+- Upon editing a note - the subject of that note disappears.  This error has been resolved. 
 
 #### Manual Testing
 

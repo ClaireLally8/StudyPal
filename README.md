@@ -2,8 +2,7 @@
 ---
 <div>
 <img src ="static/imgs/Logo.png" alt="Logo" height="200" width="300" style="display: block;
-  margin-left: auto;
-  margin-right: auto;">
+  margin-left: auto; margin-right: auto;">
 </div><br><br><br><br><br>
 Study Pal is a fullstack application targeting students studying in a class based or online set-up.  
 The Study-Pal application was created to assist students in the organisation of subjects and notes, so each student can keep track of their subjects and topics within these subjects. 
