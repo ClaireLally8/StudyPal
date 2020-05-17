@@ -48,6 +48,7 @@ The target audience, being studets, are able to create subjects and topics withi
 <br>
 <br>
 <br>
+
  ## **User Experience**
 
 ---
@@ -163,6 +164,7 @@ In order to sucessfully depict a users journey through the application, I create
 [**Customer Journey Map**](wireframes/charts/CustJourneyMap.png)
 
 <br>
+
 ---
 
 ## **Features**
