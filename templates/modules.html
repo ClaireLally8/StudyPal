@@ -61,7 +61,7 @@
 <div id="modal1" class="modal subjectmodal">
   <div class="modal-content">
     <h4>Add A Subject</h4>
-    <p>
+    <p id="ModalSubjects">
       <form action="{{ url_for('add_subject') }}" method="POST">
         <div class="input-field">
           <br><br>
@@ -80,7 +80,7 @@
 <div id="modal2" class="modal topicmodal">
   <div class="modal-content">
     <h4>Add A Topic</h4>  
-<p>
+<p id="ModalTopics">
       <form action="{{ url_for('add_topic') }}" method="POST">
         <br>
         <select class = "dropdown" id="subject" name="subject" required>

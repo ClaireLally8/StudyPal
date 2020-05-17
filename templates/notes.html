@@ -16,7 +16,7 @@
   {% for notes in notes %}
   <div class="col-lg-4 col-md-6 col-sm-12 noteblock">
   <button class="accordion">
-              <span class="card-title">{{ notes.title }}</span>
+              <span class="card-title">{{ notes.title }}</span><br><br><br>
               <span>{{ notes.subject }}</span>
   </button>
         <div class="accordion-content inside"><div>{{ notes.note }}</div><br>
@@ -32,7 +32,7 @@
 <div id="modal3" class="modal notesmodal">
   <div class="modal-content">
     <h4>Add Notes</h4>
-    <p>
+    <p id="modalNotes">
       <form action="{{ url_for('add_notes') }}" method="POST">
         <br>
         <select id="subject" name="subject" required>
