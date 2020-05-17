@@ -12,7 +12,8 @@ You can view the deployed application [here](http://study-pal.herokuapp.com/base
         - [**Resolved**](#resolved)
         - [**Unresolved**](#unresolved)
 
-2. [**User Experience Testing**](#ux-testing)
+2. [**Functional Testing**](#functional-testing)
+    - [**User Testing**](#user-tests)
 
 ---
 ### Code Testing
@@ -99,17 +100,14 @@ There is one key bug that due to both time and skill restraints I found I am una
 
 - Upon manually entering the `http://study-pal.herokuapp.com/modules` or the `http://study-pal.herokuapp.com/notes`.  The page content is displayed without an email in the Session.
     - Attempts to resolve this using an if (email in Session) statement was made, however this issue was still presented for these pages.
-
+- Select tag in HTML not defaulting to the subject name where the '+' icon is clicked.  Attempts were made to resolve, however due to lack of knowledge on why this was an issue, I was unable to resolve the issue. 
 No other known bugs were presented upon review of the application.
 
 ---
-### UX Testing
+### Functional Testing
 ---
 
-Two main tests were conducted to ensure a positive User Experience : 
-
-1) User Testing
-2) Competitive Benchmarking
+Usability tests were conducted to ensure a positive User Experience and the site was functioning correctly and as intended : 
 
 
 #### User Tests
@@ -125,3 +123,65 @@ A single usaibility test was undertaken to ensure the application was easy-to-us
     - Now, go to the topic and check off the topic, differentiation. 
     - Your lecturer has emailed, standard deviation is no longer on the exam, so you must delete everything from the application about standard deviation, note and topic. 
     - Logout of your account. 
+
+
+#### Manual Testing
+
+In order to ensure the application functioned as required, I manually tested all aspects of the deployed site.
+
+**Home Page**
+- Checking links in navbar to home, login and register pages redirects.
+    - Functioning correctly & as expected
+- Checking links in footer, to ensure jump to top, login, register reidrect work. 
+    - Functioning correctly & as expected
+
+**Login Page**
+- Check logging in with insufficent email address (no @ format, no . format)
+    - Functioning correctly & as expected
+- Check logging in with an address that isn't a registered email.
+    - Functioning correctly & as expected - however adjusted flash message and re-direct path to enhance overall user experience. 
+- Testing URL to redirect to registration page.
+    - Functioning correctly & as expected
+
+**Register Page**
+- Check registering with insufficent email address (no @ format, no . format)
+    - Functioning correctly & as expected
+- Check registering with an already registered email address
+    - Functioning correctly & as expected - however adjusted flash message and re-direct path to enhance overall user experience. 
+- Testing URL to redirect to login page.
+    - Functioning correctly & as expected
+
+**Subjects Page**
+- Check creating a subject button
+    - Functioning as expected
+- Check adding a subject with no subject name
+    - Modal closing without flashing error on lack of subject name.  RESOLVED: Resolved by the removal of the `modal-close` classname in the HTML for the modals.
+- Check creating a topic button
+    - Functioning as expected
+- Check creating a blank topic with no name
+    - Functioning as expected
+- Check creating a topic defaulting to subject where '+' was clicked
+    - Not functioning - marked in known issue as unable to resolve.
+- Check marking a topic as complete & unchecking complete
+    - Functioning as expected
+- Deleting a topic
+    - Functioning as expected
+
+**Notes Page**
+- Check creating a note button
+    - Functioning as expected
+- Check adding a note with no note content
+    - No error returned.  Issue resolved & updated. 
+- Check adding a note with no subject
+    - Functioning as expected
+- Check adding a note with no title
+    - Functioning as expected
+- Check editing a note to make blank
+    - No error returned.  Issue resolved & updated.
+- Check deleting a note
+    - Functioning as expected
+
+
+**Logout**
+- Check Logout functionality
+    - Functioning as expected
