@@ -1,7 +1,7 @@
 # [Study Pal - Your Personalised Study Tracker](https://study-pal.herokuapp.com/)
 ---
 <div>
-<img src ="static/imgs/Logo.png" alt="Logo">
+<img src ="static/imgs/Logo.png" alt="Logo" height="200" width="300">
 </div><br><br><br><br><br>
 Study Pal is a fullstack application targeting students studying in a class based or online set-up.  
 The Study-Pal application was created to assist students in the organisation of subjects and notes, so each student can keep track of their subjects and topics within these subjects. 
@@ -41,10 +41,11 @@ The target audience, being studets, are able to create subjects and topics withi
     - [**Content**](#content)
     - [**Media**](#media)
     - [**Code**](#code)
-
+<br>
+<br>
+<br>
  ## **User Experience**
 ---
-<br>
 
 ### **User stories**
 - As a vistior to the site I want to have a clear idea of the applications purpose upon visiting the site.
@@ -148,11 +149,7 @@ During the planning stages of the project, wireframes were created for desktop, 
     - [Notes](wireframes/Mobile/Notes.png)
 
 ---
-<br>
-
 ### Information Architecture
-<br>
-
 ---
 
 
@@ -160,11 +157,9 @@ In order to sucessfully depict a users journey through the application, I create
 
 [**Customer Journey Map**](wireframes/charts/CustJourneyMap.png)
 
+<br>
 ---
-<br>
-
 ## **Features**
-<br>
 
 ---
 ### Existing Features
@@ -218,10 +213,9 @@ Similar to the Subjects page, an accordion is found in the centre.
  - Clicking the edit button, will relocate to another page where the user can update the note by changing the name and the notes content.
  - Clicking the delete button will reload the page and the note will be removed from the database it's stored in. 
 
----
+<br>
 
 ## Features left to implement
-<br>
 
 There were several features planned for the future implentation of this project.
 
@@ -244,11 +238,7 @@ There were several features planned for the future implentation of this project.
 - When a user enters a start & end date for their study-pal, a user can then track their pace and what days they should be completing topcis and how many days they should be spending on each topic. 
 
 ---
-<br>
-
 ## Technologies Used 
-<br>
-
 ---
 - Gitpod - Used as the IDE for this application.
 - Github used for the remote storage of the code online.
@@ -327,11 +317,7 @@ The `email address` is added to each of the collections in order link all the th
 All information on testing can be found in [Testing.md](testing.md)
 
 ---
-<br>
-
 ## Deployment
-<br>
-
 ---
 ### Local Deployment
 
