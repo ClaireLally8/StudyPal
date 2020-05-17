@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block body %}
 <div class="container-fluid">
-<h2 class="subheading center">subjects</h2>
-<p class="subline"> Click the button at the bottom of the page to create a subject, you can then add your topics by clicking the + icon. 
-</p>
-<hr class="divider">
+  <h2 class="subheading center">subjects</h2>
+  <p class="subline"> Click the button at the bottom of the page to create a subject, you can then add your topics by clicking the + icon.
+  </p>
+  <hr class="divider">
 </div>
 <div class="container-fluid accordioncontainer">
   {% for subject in subjects %}
@@ -16,12 +16,12 @@
         Topic Name
       </div>
       <div class="col-4">
-      Complete
+        Complete
       </div>
       <div class="col-4">
         <a class="modal-trigger tooltipped" data-position="bottom" data-tooltip="Add a topic" href="#modal2">
-    <i class="small material-icons accordionicon">add</i>
-  </a>
+          <i class="small material-icons accordionicon">add</i>
+        </a>
       </div>
     </div>
     <hr>
@@ -33,12 +33,12 @@
         <p>{{topic.topic}}</p>
       </div>
       <div class="col-4">
-      <p onclick="toggle_complete('{{topic._id}}')">
-      <label>
-        <input id={{topic._id}} type="checkbox"  class="filled-in checkbox-golden" {% if topic.complete %} checked {% endif %}/>
-        <span></span>
-      </label>
-    </p>
+        <p onclick="toggle_complete('{{topic._id}}')">
+          <label>
+            <input id={{topic._id}} type="checkbox" class="filled-in checkbox-golden" {% if topic.complete %} checked {% endif %} />
+            <span></span>
+          </label>
+        </p>
       </div>
       <div class="col-4">
         <a href="{{url_for('delete', topics_id=topic._id)}}"><i class="small material-icons accordionicon">delete</i></a>
@@ -61,42 +61,42 @@
 <div id="modal1" class="modal subjectmodal">
   <div class="modal-content">
     <h4>Add A Subject</h4>
-      <form action="{{ url_for('add_subject') }}" method="POST">
-        <div class="input-field">
-          <br><br>
-          <label>Subject Name</label>
-          <input id="subjects" name="subjects" type="text" required>
-        </div>
-        <div class="modal-footer">
-          <button class="modal-close button waves-effect btn" type="submit">Add Subject</button>
-        </div>
-      </form>
+    <form action="{{ url_for('add_subject') }}" method="POST">
+      <div class="input-field">
+        <br><br>
+        <label>Subject Name</label>
+        <input id="subjects" name="subjects" type="text" required>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-close button waves-effect btn" type="submit">Add Subject</button>
+      </div>
+    </form>
   </div>
 </div>
 
 <!-- Modal Structure for adding a new topic -->
 <div id="modal2" class="modal topicmodal">
   <div class="modal-content">
-    <h4>Add A Topic</h4>  
-      <form action="{{ url_for('add_topic') }}" method="POST">
-        <br>
-        <select class = "dropdown" id="subject" name="subject" required>
+    <h4>Add A Topic</h4>
+    <form action="{{ url_for('add_topic') }}" method="POST">
+      <br>
+      <select class="dropdown" id="subject" name="subject" required>
         <option value="" disabled selected>Choose the subject</option>
         {% for sub in subjectList %}
         <option value="{{sub.subject}}">{{sub.subject}}
         </option>
         {% endfor %}
-        </select>
+      </select>
+      <br><br>
+      <div class="input-field">
         <br><br>
-        <div class="input-field">
-          <br><br>
-          <label>Topic Name</label>
-          <input id="topic_name" name="topic" type="text" required>
-          <div class="modal-footer">
+        <label>Topic Name</label>
+        <input id="topic_name" name="topic" type="text" required>
+        <div class="modal-footer">
           <button class="modal-close button waves-effect btn" type="submit">Add Topic</button>
         </div>
-        </div>
-      </form>
+      </div>
+    </form>
   </div>
 </div>
 {% endblock %}

@@ -2,17 +2,17 @@
 {% block body %}
 
 <div class="container">
-    <form action="{{ url_for('update_notes', note_id=note._id) }}" method="POST">
-     <div class="input-field notetitle">
-            <input id="title" name="title" type="text" required value="{{note.title}}"> 
-        </div>
-      <div class="input-field notetext">
-        <textarea name="note" id="note" class="large">{{note.note}}</textarea>
-      </div>
-      <div class="container-fluid">
-        <button class="btn center" type="submit">Update
-        </button>
-      </div>
-    </form>
-  </div>
-  {% endblock %}
+  <form action="{{ url_for('update_notes', note_id=note._id) }}" method="POST">
+    <div class="input-field notetitle">
+      <input id="title" name="title" type="text" required value="{{note.title}}">
+    </div>
+    <div class="input-field notetext">
+      <textarea name="note" id="note" class="large">{{note.note}}</textarea>
+    </div>
+    <div class="container-fluid">
+      <button class="btn center" type="submit">Update
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}

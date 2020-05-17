@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.4.1/sandstone/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -14,97 +14,98 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
     <title>Study Pal</title>
   </head>
-  <body>
-  <div class="main-container">
-    <nav>
-      <div class="nav-wrapper">
-        <ul id="nav-mobile" class="right">
-          <li><a class = "navlink" href="{{ url_for('base') }}">Home</a></li>
-          <li><a class = "navlink" href="{{ url_for('home') }}">Login</a></li>
-          <li><a class = "navlink" href="{{ url_for('register') }}">Register</a></li>
-        </ul>
-      </div>
-    </nav>
-    <section class="homepage">
-      <div class="container-fluid titles">
-        <h2 class="homehead">Study Pal</h2>
-        <h3 class="homebase">Your personalised study planner and note storage pal!</h3>
-      </div>
-      <div class="mainhomepages">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <p class="subtext">Take notes anywhere. Find information faster. <br>Study notes, to do lists and more by using Study-Pal as your study tracking app, nothing falls through the cracks.</p>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <img src="{{ url_for('static', filename='imgs/computer.svg') }}" class="img-fluid" alt="Landing Image">
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="bylinesection">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <p class="code"><i class="material-icons large">code</i></p>
-            <h5 class="byline">Focus on the things that matter the most. </h5>
+  <body>
+    <div class="main-container">
+      <nav>
+        <div class="nav-wrapper">
+          <ul id="nav-mobile" class="right">
+            <li><a class="navlink" href="{{ url_for('base') }}">Home</a></li>
+            <li><a class="navlink" href="{{ url_for('home') }}">Login</a></li>
+            <li><a class="navlink" href="{{ url_for('register') }}">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section class="homepage">
+        <div class="container-fluid titles">
+          <h2 class="homehead">Study Pal</h2>
+          <h3 class="homebase">Your personalised study planner and note storage pal!</h3>
+        </div>
+        <div class="mainhomepages">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <p class="subtext">Take notes anywhere. Find information faster. <br>Study notes, to do lists and more by using Study-Pal as your study tracking app, nothing falls through the cracks.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <img src="{{ url_for('static', filename='imgs/computer.svg') }}" class="img-fluid" alt="Landing Image">
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <hr class="divider">
-    <section class="howitworks">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-12 col-lg-3 col-md-6">
-            <p class="icons"><i class="material-icons small">assignment_ind</i></p>
-            <h5 class="iconhead">Sign Up</h5>
-            <p class="icontext">Create your <strong>free</strong> account to plan your study way</p>
-          </div>
-          <div class="col-sm-12 col-lg-3 col-md-6">
-            <p class="icons"><i class="material-icons small">add</i></p>
-            <h5 class="iconhead">Add your Subjects</h5>
-            <p class="icontext">Use the button to add your subjects and topics to your study plan </p>
-          </div>
-          <div class="col-sm-12 col-lg-3 col-md-6">
-            <p class="icons"><i class="material-icons small">post_add</i></p>
-            <h5 class="iconhead">Create your notes</h5>
-            <p class="icontext">Jump to the notes pages to create the notes for your subjects.</p>
-          </div>
-          <div class="col-sm-12 col-lg-3 col-md-6">
-            <p class="icons"><i class="material-icons small">check</i></p>
-            <h5 class="iconhead">Mark Complete</h5>
-            <p class="icontext">Each topic you study, check them off as complete</p>
+      </section>
+
+      <section class="bylinesection">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <p class="code"><i class="material-icons large">code</i></p>
+              <h5 class="byline">Focus on the things that matter the most. </h5>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
- <hr class="divider">
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Contact Us</h5>
-            <p class="grey-text text-lighten-4">email: study-pal@gmail.com</p>
-            <p class="grey-text text-lighten-4">phone: +353 123456789</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Navigation</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#top">Jump to Top</a></li>
-              <li><a class="grey-text text-lighten-3" href="{{ url_for('home') }}">Login</a></li>
-              <li><a class="grey-text text-lighten-3" href="{{ url_for('register') }}">Register</a></li>
-            </ul>
+      </section>
+      <hr class="divider">
+      <section class="howitworks">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 col-lg-3 col-md-6">
+              <p class="icons"><i class="material-icons small">assignment_ind</i></p>
+              <h5 class="iconhead">Sign Up</h5>
+              <p class="icontext">Create your <strong>free</strong> account to plan your study way</p>
+            </div>
+            <div class="col-sm-12 col-lg-3 col-md-6">
+              <p class="icons"><i class="material-icons small">add</i></p>
+              <h5 class="iconhead">Add your Subjects</h5>
+              <p class="icontext">Use the button to add your subjects and topics to your study plan </p>
+            </div>
+            <div class="col-sm-12 col-lg-3 col-md-6">
+              <p class="icons"><i class="material-icons small">post_add</i></p>
+              <h5 class="iconhead">Create your notes</h5>
+              <p class="icontext">Jump to the notes pages to create the notes for your subjects.</p>
+            </div>
+            <div class="col-sm-12 col-lg-3 col-md-6">
+              <p class="icons"><i class="material-icons small">check</i></p>
+              <h5 class="iconhead">Mark Complete</h5>
+              <p class="icontext">Each topic you study, check them off as complete</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="footer-copyright">
+      </section>
+      <hr class="divider">
+      <footer class="page-footer">
         <div class="container">
-          © Educational purposes only
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Contact Us</h5>
+              <p class="grey-text text-lighten-4">email: study-pal@gmail.com</p>
+              <p class="grey-text text-lighten-4">phone: +353 123456789</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Navigation</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#top">Jump to Top</a></li>
+                <li><a class="grey-text text-lighten-3" href="{{ url_for('home') }}">Login</a></li>
+                <li><a class="grey-text text-lighten-3" href="{{ url_for('register') }}">Register</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
-  </div>
+        <div class="footer-copyright">
+          <div class="container">
+            © Educational purposes only
+          </div>
+        </div>
+      </footer>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>

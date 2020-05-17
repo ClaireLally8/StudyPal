@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Study Tracker</title>
-<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
-</head>
-<body>
-<div class="main-container">
-    <nav class="z-depth-0">
-      <div class="nav-wrapper">
-        <ul id="nav-mobile" class="right">
-        <li><a  class = "navlink" href="{{ url_for('base') }}">Home</a></li>
-          <li><a  class = "navlink" href="{{ url_for('home') }}">Login</a></li>
-          <li><a  class = "navlink" href="{{ url_for('register') }}">Register</a></li>
-        </ul>
-      </div>
-    </nav>
- {% block body %}
- {% endblock %}
- <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Contact Us</h5>
-            <p class="grey-text text-lighten-4">email: study-pal@gmail.com</p>
-            <p class="grey-text text-lighten-4">phone: +353 123456789</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Navigation</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#top">Jump to Top</a></li>
-              <li><a class="grey-text text-lighten-3" href="{{ url_for('home') }}">Login</a></li>
-              <li><a class="grey-text text-lighten-3" href="{{ url_for('register') }}">Register</a></li>
-            </ul>
-          </div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
+  </head>
+
+  <body>
+    <div class="main-container">
+      <nav class="z-depth-0">
+        <div class="nav-wrapper">
+          <ul id="nav-mobile" class="right">
+            <li><a class="navlink" href="{{ url_for('base') }}">Home</a></li>
+            <li><a class="navlink" href="{{ url_for('home') }}">Login</a></li>
+            <li><a class="navlink" href="{{ url_for('register') }}">Register</a></li>
+          </ul>
         </div>
-      </div>
-      <div class="footer-copyright">
+      </nav>
+      {% block body %}
+      {% endblock %}
+      <footer class="page-footer">
         <div class="container">
-          © Educational purposes only
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Contact Us</h5>
+              <p class="grey-text text-lighten-4">email: study-pal@gmail.com</p>
+              <p class="grey-text text-lighten-4">phone: +353 123456789</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Navigation</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#top">Jump to Top</a></li>
+                <li><a class="grey-text text-lighten-3" href="{{ url_for('home') }}">Login</a></li>
+                <li><a class="grey-text text-lighten-3" href="{{ url_for('register') }}">Register</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
-</div>
+        <div class="footer-copyright">
+          <div class="container">
+            © Educational purposes only
+          </div>
+        </div>
+      </footer>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
+  </body>
+
 </html>
