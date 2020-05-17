@@ -7,6 +7,10 @@ You can view the deployed application [here](http://study-pal.herokuapp.com/base
 
 1. [**Code Testing**](#code-testing)
     - [**Validator Testing**](#validator-testing)
+    - [**Compatibility Testing**](#compatibility-testing)
+    - [**Known Issues**](#known-issues)
+        - [**Resolved**](#resolved)
+        - [**Unresolved**](#unresolved)
 
 2. [**User Experience Testing**](#ux-testing)
 
@@ -35,6 +39,9 @@ You can view the deployed application [here](http://study-pal.herokuapp.com/base
     - $
     - sidemenunav
 
+[JSesprima](https://esprima.org/demo/validate.html)
+- "Code is syntactically valid"
+
 [Python PEP8](https://pypi.org/project/autopep8/)
 - The autopep8 extension was installed in the workspace. 
     - To install this enter this in the terminal: 
@@ -57,3 +64,41 @@ When the `app.py` code is pasted into [PEP8 checker](http://pep8online.com/), th
  3. line too long (90 > 79 characters)
 
  These errors flagged are down to the flask app routing for returning variables to display content in the HTML file and no way to resolve these has been discussed.
+
+ #### Compatibility Testing
+ To ensure a the maximum amount of users are able to use this application.   I tested it's compatibility among various browsers and device screen sizes :
+ 
+ - Browsers
+    - Chrome
+    - Firefox
+    - Safari
+    - Opera
+    - Microsoft Edge
+- Screen Sizes
+    - 21-inch display
+    - 15-inch display
+    - 13-inch display
+    - 10-inch display
+    - 6-inch display
+    - 5-inch display    
+
+#### Known Issues
+
+##### Resolved 
+
+- An issue with the footer not sticking to the bottom of the page was highlighed on the 10-inch display on all browers. This issue was resolved using code adapted from this [Medium Article](https://medium.com/@zerox/keep-that-damn-footer-at-the-bottom-c7a921cb9551)
+- Completed Topics only checked off after the page reloaded 
+    - This was resolved by creating a JS function which add/removes the classname isComplete upon clicking the checkbox, which changes the colour of the topic font.
+    - This function also toggles the `checked` field to true/false
+- Subject accordion displaying multiple times for each topic
+    - To resolve: I had to alter the app route so the topics variable was returned in a list.  Then the for loops in the HTML were pulled in and looped thorugh so that each subject would display once, and the topics related to that subject will be found within the accordion.
+
+##### Unresolved
+
+There is one key bug that due to both time and skill restraints I found I am unable to resolve: 
+
+- Upon manually entering the `http://study-pal.herokuapp.com/modules` or the `http://study-pal.herokuapp.com/notes`.  The page content is displayed without an email in the Session.
+    - Attempts to resolve this using an if (email in Session) statement was made, however this issue was still presented for these pages.
+
+No other known bugs were presented upon review of the application.
+
