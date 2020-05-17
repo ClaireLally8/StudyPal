@@ -19,6 +19,8 @@ mongo = PyMongo(app)
 
 # First page - index.html where user is asked to enter their email address
 # to access their schedule
+
+
 @app.route('/')
 def index():
     if 'email' in session:
@@ -111,7 +113,8 @@ def delete(topics_id):
 def notes():
     email = session['email']
     return render_template("notes.html", subjects=mongo.db.subjects.find(
-        {'email': session['email']}), notes=mongo.db.notes.find({'email': session['email']}))
+        {'email': session['email']}),
+        notes=mongo.db.notes.find({'email': session['email']}))
 
 
 @app.route('/add_notes', methods=['POST'])
