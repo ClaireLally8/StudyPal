@@ -362,7 +362,7 @@ All content for the Study-Pal application was written by me.
 
 #### Media
 
-- Images were sources from [unDraw](https://undraw.co/), a site containing open soruce images.
+- Images were sources from [unDraw](https://undraw.co/), a site containing open soruce illustrations.
 - Layout from the home-page was adapted from [inVision](https://www.invisionapp.com/)
 
 #### Code
