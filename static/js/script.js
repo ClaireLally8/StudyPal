@@ -10,7 +10,7 @@ $(document).ready(function () {
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 hamburgerBtn.addEventListener('click', () => {
     sidemenunav.classList.toggle('open');
-})
+});
 /** code by webdevtrick ( https://webdevtrick.com ) **/
 var accordions = document.getElementsByClassName("accordion");
 
@@ -26,7 +26,7 @@ for (var i = 0; i < accordions.length; i++) {
             // accordion is currently closed, so open it
             content.style.maxHeight = content.scrollHeight + "px";
         }
-    }
+    };
 }
 
 function toggle_complete(topics_id) {
