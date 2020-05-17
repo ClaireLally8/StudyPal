@@ -374,6 +374,7 @@ SECRET KEY | <secret_key>
 ### Content
 
 All content for the Study-Pal application was written by me. 
+
 ---
 
 #### Media
@@ -386,3 +387,4 @@ All content for the Study-Pal application was written by me.
 - I followed [this tutorial](https://www.youtube.com/watch?v=vVx1737auSE) on how to create the login functionality using Flask & Pymongo. 
 - Code for the accordion was adapted from [WebDevTrick](https://webdevtrick.com/html-css-javascript-accordion-source-code/) & is credited in the JS code also.
 - The Sidenav bar was adapted from two videos - [Animated Side Nav](https://www.youtube.com/watch?v=acuYmzY6XOg) and another youtube video which has since been deleted. 
+- Code for keeping the footer on the bottom was adapted form the following [Medium Article](https://medium.com/@zerox/keep-that-damn-footer-at-the-bottom-c7a921cb9551)
