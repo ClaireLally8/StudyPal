@@ -32,7 +32,6 @@
 <div id="modal3" class="modal notesmodal">
   <div class="modal-content">
     <h4>Add Notes</h4>
-    <p id="modalNotes">
       <form action="{{ url_for('add_notes') }}" method="POST">
         <br>
         <select id="subject" name="subject" required>
@@ -55,7 +54,6 @@
           <button class="modal-close button waves-effect btn" type="submit">Add Note</button>
         </div>
       </form>
-    </p>
   </div>
 </div>
 {% endblock %}
