@@ -7,6 +7,9 @@
 Study Pal is a fullstack application targeting students studying in a class based or online set-up.  
 The Study-Pal application was created to assist students in the organisation of subjects and notes, so each student can keep track of their subjects and topics within these subjects. 
 The target audience, being studets, are able to create subjects and topics within one page and track their study by ticking off each subject as they complete. In another page, students are able to create, update and delete notes. 
+
+## **NB**
+**For viewing purposes,  a test account has been made using the email address - testing@testing.com**
 <br>
 <br>
 <br><br>
